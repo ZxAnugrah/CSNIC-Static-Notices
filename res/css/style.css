@@ -7539,3 +7539,33 @@ html:lang(th) #gradeHistoryPop li dt {
 .text-italic {
   font-style: italic;
 }
+
+hr.bold {
+  border: 1px solid;
+}
+
+.map-resize-small {
+  width: 400px;
+  height: auto;
+  rotate: 4deg;
+}
+
+.border-epic {
+  background: #4e2440;
+  border-bottom: 2px;
+  border-left: 3px solid #ff1cc4;
+  border-right: 3px solid #ff1cc4;
+  border-top: 3px solid #ffb5ea;
+  border-bottom: 3px solid #930066;
+  border-radius: 2px;
+}
+
+.border-transcendence {
+  background: #7a663c;
+  border-bottom: 2px;
+  border-left: 3px solid #cb8f0f;
+  border-right: 3px solid #cb8f0f;
+  border-top: 3px solid #fffbbf;
+  border-bottom: 3px solid #e4c75e;
+  border-radius: 2px;
+}
