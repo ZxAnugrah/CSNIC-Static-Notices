@@ -5473,7 +5473,7 @@ html:lang(th) #gradeHistoryPop li dt {
   color: #23527c;
   text-decoration: underline;
 }
-.note-editor img {
+.note-editor {
   height: auto !important;
 }
 .view-box .note-editor {
