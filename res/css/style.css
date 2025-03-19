@@ -7547,6 +7547,11 @@ hr.bold {
 .map-resize-small {
   width: 400px;
   height: auto;
+}
+
+.map-resize-small-rotate {
+  width: 400px;
+  height: auto;
   rotate: 4deg;
 }
 
