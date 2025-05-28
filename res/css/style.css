@@ -241,6 +241,32 @@ body {
   min-width: 1000px;
   background: #f9f9f9;
 }
+.dark-mode {
+  background-color: black;
+}
+.dark-mode #gnb .inner {
+  background-color: black;
+  color: white;
+}
+.dark-mode #gnb .inner .tit {
+  color: white;
+}
+.dark-mode .bread-crumb {
+  color: white;
+}
+.dark-mode .bread-crumb .inner {
+  color: white;
+}
+.dark-mode .bread-crumb .inner .color-gray {
+  color: white;
+}
+.dark-mode .bread-crumb .inner .key-color {
+  color: white;
+}
+.dark-mode .box {
+  color: white;
+  background-color: black;
+}
 #wrap {
   overflow: hidden;
   width: 100%;
@@ -6633,6 +6659,10 @@ html:lang(th) #gradeHistoryPop li dt {
   background-color: #000 !important;
 }
 
+.dark-mode .key-color-bg {
+  border-bottom: 1px solid white;
+}
+
 /* QNA Board List*/
 .qna-profile-wrapper {
   display: flex;
@@ -7505,6 +7535,33 @@ html:lang(th) #gradeHistoryPop li dt {
   margin: 0 10px 0 10px;
 }
 
+.btn-darkmode {
+  float: right;
+  color: white;
+  font-weight: bold;
+  margin: 25px 5px 10px 10px;
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  text-align: center;
+  background-color: dimgrey;
+  padding: 10px;
+}
+
+.btn-lightmode {
+  float: right;
+  color: white;
+  font-weight: bold;
+  margin: 25px 5px 10px 10px;
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  text-align: center;
+  background-color: black;
+  padding: 9px;
+  border: 1px solid white;
+}
+
 .btn-play {
   float: right;
   color: white;
@@ -7572,5 +7629,26 @@ hr.bold {
   border-right: 3px solid #cb8f0f;
   border-top: 3px solid #fffbbf;
   border-bottom: 3px solid #e4c75e;
+  border-radius: 2px;
+}
+
+.border-unique {
+  background: #572424;
+  border-bottom: 2px;
+  border: 3px solid #740d0d;
+  border-radius: 2px;
+}
+
+.border-rare {
+  background: #244357;
+  border-bottom: 2px;
+  border: 3px solid #0b62aa;
+  border-radius: 2px;
+}
+
+.border-advanced {
+  background: #215e21;
+  border-bottom: 2px;
+  border: 3px solid #0e7216;
   border-radius: 2px;
 }
