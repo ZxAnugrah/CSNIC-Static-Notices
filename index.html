@@ -58,6 +58,17 @@
                 </a>
               </li>
             </ul>
+            <hr style="margin: 15px 15px" />
+            <!-- <ul class="menu">
+              <li>
+                <a href="https://youtube.com/@Ritsukazed" target="_blank">
+                  <div class="icon-box">
+                    <i class="icon-img"> <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="" /></i>
+                  </div>
+                  <span class="tit">Ritsukazed</span>
+                </a>
+              </li>
+            </ul> -->
           </div>
         </div>
         <!-- //gnb -->
@@ -85,10 +96,12 @@
               <dl class="article-info">
                 <dd class="writer">Counter Strike Nexon Indonesia Community</dd>
                 <dd>
-                  <span class="date">Last update: May 28th, 2025</span>
+                  <span class="date">Last update: June 5th, 2025</span>
                 </dd>
               </dl>
             </div>
+
+            <button onclick="topFunction()" id="scrollToTop" title="Go to top">&uarr;</button>
 
             <div class="view-box">
               <div class="txt note-editor">
@@ -96,6 +109,62 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <img src="./res/img/en-announcement.png" />
                   </p>
+                  <hr class="bold" />
+                  <div>
+                    <p style="font-weight: bold">[Event] Zombie Hero Classic Pre-registration Event</p>
+                    <div>
+                      <br />
+                      <p style="font-weight: bold; color: red">[This information based from official CSN Announcement]</p>
+                      <p>
+                        Ini adalah kebangkitan bagi soldier dari tahun 2012... <br />
+                        Pre-register sekarang, dan rasakan nostalgia masa lalu di era saat ini! <br />
+                        <br />
+                        Halo, soldier. Kami mengadakan event pre-registration untuk merayakan peluncuran Zombie Hero Classic. <br />
+                        Pre-register sekarang, dan dapatkan hadiah spesial! <br />
+                      </p>
+
+                      <p class="text-bold">
+                        Pre-register melalui Google Form pada link berikut:<br />
+                        <a style="text-underline-position: below" href="https://forms.gle/FP3DELXZ2ARKWbF76" class="color-gray" target="_blank">Counter-Strike Nexon Pre-Registration Zombie Hero Classic</a>
+                      </p>
+                      <hr />
+                      <p class="text-bold">Periode Pre-Register:</p>
+                      <ul>
+                        <li>28 Mei - 11 Juni 05:59 WIB (GMT +7)</li>
+                      </ul>
+                      <br />
+                      <p class="text-bold">Hadiah Pre-Register:</p>
+                      <ul>
+                        <li>[ZHC] Black Dragon Cannon (3 hari)</li>
+                        <li>[ZHC] SKULL-9 (3 hari)</li>
+                        <li>[ZHC] Advanced Decoder (1x)</li>
+                        <li>Victorious Nameplate (1x)</li>
+                      </ul>
+                      <br />
+                      <p class="text-bold">Reward Bonus 1</p>
+                      <p>Log in selama 3 hari setelah pre-register untuk mendapatkan bonus reward.</p>
+                      <ul>
+                        <li>[ZHC] Advanced Decoder (7x)</li>
+                        <li>Victorious Medal (1x)</li>
+                      </ul>
+                      <br />
+                      <p class="text-bold">Reward Bonus 2</p>
+                      <p>Di antara soldier yang memperoleh Victorius Medal setelah maintenance 11 Juni (Rabu) - sebelum maintenance 25 Juni (Rabu), 10 pemenang yang beruntung akan dipilih untuk menerima merchandise CSN.</p>
+                      <p class="text-bold">
+                        Tag teman kalian di komentar Facebook untuk meningkatkan peluang menang pada link berikut: <br />
+                        <a style="text-underline-position: below" href="https://www.facebook.com/csnxstudio/posts/1306097211524934" class="color-gray" target="_blank">Counter-Strike Nexon Facebook Page</a>
+                      </p>
+                      <hr />
+                      <ul>
+                        <li>Jika kalian ingin mengklaim hadiah ini, kalian harus memasukkan informasi pribadi kalian di Formulir Google untuk menerima hadiah.</li>
+                        <li style="font-style: italic; font-weight: bold">Jika kalian tidak memasukkan informasi pribadi yang benar, kami tidak akan dapat mengirimkan hadiah kepada kalian.</li>
+                        <li>Informasi pribadi yang dikumpulkan hanya akan digunakan untuk mengirimkan hadiah kalian dan akan dihapus setelah hadiah dikirimkan.</li>
+                        <li>Detail event dan hadiah event dapat dibatalkan atau berubah tanpa dapat dihindari, dalam hal ini kami akan memberi tahu kalian setelahnya.</li>
+                        <br />
+                        <a href="https://store.steampowered.com/news/app/273110/view/539980512648757864" class="color-gray text-bold" target="_blank">Official Announcement CSN (Steam)</a>
+                      </ul>
+                    </div>
+                  </div>
                   <hr class="bold" />
                   <!-- 28 Mei 2025 -->
                   <p style="text-align: justify; margin-bottom: 11px; margin-top: 15px">
@@ -267,8 +336,7 @@
                   <!-- 15 Januari 2025 -->
                   <div id="15012025">
                     <p style="text-align: justify">
-                      <span style="font-size: 14pt">Update Patch</span>
-                      <span style="font-size: 10pt">(15 Januari 2025)</span>
+                      <span style="font-size: 14pt">Update Patch (15 Januari 2025)</span>
                     </p>
                     <p style="text-align: justify; margin-bottom: 11px">
                       <span lang="EN-US" style="font-size: 11pt">
@@ -364,6 +432,24 @@
 
         var element = document.getElementById("changetheme");
         element.classList.toggle("btn-lightmode");
+      }
+    </script>
+    <script>
+      let mybutton = document.getElementById("scrollToTop");
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
       }
     </script>
   </body>
