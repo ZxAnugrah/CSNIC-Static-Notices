@@ -235,10 +235,10 @@ html.pop-open {
   overflow-y: hidden;
 }
 body {
-  overflow: hidden;
+  overflow-x: auto;
   position: relative;
   width: 100%;
-  min-width: 1000px;
+  min-width: 0; /* Remove or set to 320px for mobile */
   background: #f9f9f9;
 }
 .dark-mode {
@@ -278,19 +278,25 @@ body {
   width: 100%;
 }
 #container {
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box; */
+
+  display: flex;
   position: relative;
-  width: 1340px;
+  width: 1200px;
   min-height: calc(100vh - 276px);
   padding-top: 25px;
   margin: 0 auto;
 }
 #contents {
-  float: right;
-  position: relative;
-  width: 1000px;
-  min-height: 45vh;
-  padding-bottom: 80px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 16px;
   box-sizing: border-box;
 }
 #footer {
@@ -534,15 +540,25 @@ li h3 {
   border-radius: 50%;
 }
 
+#gnb {
+  width: 240px;
+  min-width: 180px;
+}
+
+#gnb .inner {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 #container::after {
   display: block;
   clear: both;
   content: "";
 }
 #container #gnb {
-  float: left;
+  /* float: left; */
   overflow-y: auto;
-  width: 300px;
+  width: 400px;
   height: 100%;
   margin-bottom: 110px;
   background-color: #fff;
@@ -691,6 +707,13 @@ li h3 {
 .menu a:focus {
   background-color: #ececef80;
 }
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .menu .icon-box {
   position: absolute;
   right: 260px;
@@ -6614,6 +6637,18 @@ html:lang(th) #gradeHistoryPop li dt {
   }
 }
 
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  #container,
+  #contents {
+    max-width: 100%;
+    padding: 8px;
+  }
+  body {
+    min-width: 0;
+  }
+}
+
 /* toggle */
 .toggleSwitch {
   width: 44px;
@@ -7690,6 +7725,6 @@ hr.bold {
   color: white;
 }
 
-.text-bold{
+.text-bold {
   font-weight: bold;
 }
