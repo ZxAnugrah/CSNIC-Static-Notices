@@ -7657,6 +7657,16 @@ hr.bold {
   border-radius: 2px;
 }
 
+.border-legend {
+  background: #1e0252;
+  border-bottom: 2px;
+  border-left: 3px solid #28046b;
+  border-right: 3px solid #300580;
+  border-top: 3px solid #4407b4;
+  border-bottom: 3px solid #28046b;
+  border-radius: 2px;
+}
+
 .border-transcendence {
   background: #7a663c;
   border-bottom: 2px;
