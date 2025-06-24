@@ -7698,6 +7698,10 @@ hr.bold {
   border-radius: 2px;
 }
 
+.text-strikethrough {
+  text-decoration: line-through;
+}
+
 #scrollToTop {
   display: none;
   position: fixed;
