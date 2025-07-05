@@ -7702,6 +7702,11 @@ hr.bold {
   text-decoration: line-through;
 }
 
+.text-warning {
+  color: red;
+  font-weight: bold;
+}
+
 #scrollToTop {
   display: none;
   position: fixed;
@@ -7711,11 +7716,16 @@ hr.bold {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: white;
-  color: gray;
+  background-color: #333;
+  color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 4px;
+}
+
+#scrollToTop:hover {
+  background-color: #555;
+  color: white;
 }
 
 .btn-darkmode-scroll {
@@ -7738,7 +7748,27 @@ hr.bold {
   background-color: #333;
   color: white;
 }
+.dark-mode #scrollToTop:hover {
+  background-color: #555;
+  color: white;
+}
 
 .text-bold {
   font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.youtube-iframe {
+  width: 800px;
+  height: 450px;
+  margin: 10px 5px 10px -5px;
+  position: relative;
+  max-width: 100%;
 }
