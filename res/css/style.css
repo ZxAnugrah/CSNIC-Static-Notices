@@ -1144,7 +1144,6 @@ a.btn-basic {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  vertical-align: bottom;
 }
 
 .txt {
@@ -1646,7 +1645,6 @@ a.btn-basic {
   padding: 28px 24px 24px;
   background-color: #fff;
   border: 1px solid #e8ebf2;
-  text-align: center;
 }
 .type-creators .creators-grade {
   display: block;
@@ -1893,6 +1891,7 @@ a.btn-basic {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  box-sizing: border-box;
 }
 .sticky-box .type-media li h3.with-img {
   width: 310px;
@@ -1918,6 +1917,7 @@ a.btn-basic {
   margin: 0 8px;
   font-size: 15px;
   line-height: 28px;
+  text-align: center;
   text-align: center;
   letter-spacing: -2px;
 }
@@ -7692,4 +7692,113 @@ hr.bold {
   margin: 10px 5px 10px -5px;
   position: relative;
   max-width: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background: #fff;
+  margin: 1% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 1000px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.iframe-side {
+  flex: 2;
+  min-width: 600px;
+  max-width: 800px;
+}
+
+.iframe-side iframe,
+#popupIframe {
+  width: 100%;
+  height: 880px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .modal-content {
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 98vw;
+    gap: 16px;
+    width: 98vw;
+    padding: 10px;
+  }
+  .iframe-side,
+  .iframe-info {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .iframe-side iframe,
+  #popupIframe {
+    height: 860px;
+    min-height: 200px;
+    max-width: 100vw;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.iframe-content {
+  background-color: #959cbc;
+  padding: 0;
+  width: 100%;
+  height: 865px;
+  margin-top: 15px;
+}
+
+.maintenance-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.countdown-timer {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #d9534f;
+  font-size: 13px;
+  background: #fff6f6;
+  border-radius: 4px;
+  padding: 2px 8px;
+  vertical-align: middle;
+  transition: opacity 0.3s;
+}
+
+/* Optionally hide li smoothly when expired */
+li[data-board-id] {
+  transition: opacity 0.3s;
+}
+li[data-board-id][style*="display: none"] {
+  opacity: 0;
+}
+
+.font-normal {
+  font-size: 11px;
 }

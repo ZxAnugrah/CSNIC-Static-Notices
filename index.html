@@ -10,10 +10,11 @@
     <meta property="og:image" content="https://i.ibb.co/MqGKypR/og-images.jpg" />
     <meta name="description" content="Counter-Strike Nexon Indonesia Community (CSNIC) is a community for Counter-Strike Nexon players in Indonesia. Join us for the latest news, updates, and events!" />
     <meta name="author" content="ZxAnugrah" />
-    <title>Counter-Strike Nexon Indonesia Community - Announcement</title>
+    <title>Counter-Strike Nexon Indonesia Community - Information</title>
     <link rel="stylesheet" href="./res/css/bootstrap.min.css" />
     <link rel="icon" href="./res/img/csn-logo.png" />
     <link rel="stylesheet" href="./res/css/style.css" />
+    <script src="./res/js/script.js"></script>
     <style data-styled="active" data-styled-version="5.3.11"></style>
   </head>
 
@@ -61,16 +62,32 @@
               </li>
             </ul>
             <hr style="margin: 15px 15px" />
-            <!-- <ul class="menu">
-              <li>
+            <ul class="menu">
+              <li data-board-id="6000" data-board-type="LINK">
+                <a onclick="openModal('maintenance.htm')" href="javascript:void(0)">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/csn-maintenance.png" alt="" /></i>
+                  </div>
+                  <span class="tit">Regular Maintenance</span>
+                </a>
+              </li>
+              <li data-board-id="6001" data-board-type="LINK">
+                <a onclick="openModal('temp-maintenance.htm')" href="javascript:void(0)">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/csn-temp-maintenance.png" alt="" /></i>
+                  </div>
+                  <span class="tit">Temporary Maintenance</span>
+                </a>
+              </li>
+              <!-- <li>
                 <a href="https://youtube.com/@Ritsukazed" target="_blank">
                   <div class="icon-box">
                     <i class="icon-img"> <img src="https://www.iconpacks.net/icons/2/free-youtube-logo-icon-2431-thumb.png" alt="" /></i>
                   </div>
                   <span class="tit">Ritsukazed</span>
                 </a>
-              </li>
-            </ul> -->
+              </li> -->
+            </ul>
           </div>
         </div>
         <!-- //gnb -->
@@ -87,9 +104,7 @@
             </div>
           </div>
 
-          <div class="section-banners"></div>
           <div class="box section-top">
-            <h2 class="blind">board view</h2>
             <div class="title-box">
               <h3>Announcement</h3>
               <div class="profile-img">
@@ -532,46 +547,34 @@
     <div id="footer">
       <div class="logo-nexon">
         <img src="./res/img/footer-logo.png" alt="" />
-        <span>© NEXON Korea Corp. All Right Reserved.</span>
+        <span>© NEXON Korea Corp. All Right Reserved. | 2025</span>
+        <span>| Site created by: Admin Anugrah</span>
       </div>
     </div>
-    <script>
-      function dark_mode_theme() {
-        var element = document.body;
-        element.classList.toggle("dark-mode");
 
-        var x = document.getElementById("changetheme");
-        if (x.innerHTML === "Dark&nbsp;&nbsp;Mode") {
-          x.innerHTML = "Light&nbsp;Mode";
-        } else {
-          x.innerHTML = "Dark&nbsp;&nbsp;Mode";
-        }
-
-        var element = document.getElementById("changetheme");
-        element.classList.toggle("btn-lightmode");
-      }
-    </script>
-    <script>
-      let mybutton = document.getElementById("scrollToTop");
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-
-      function eventexpired() {
-        alert("This event has expired. Please check the latest announcements for new events.");
-      }
-    </script>
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe id="popupIframe" src="" class="iframe-content" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
   </body>
+  <script>
+    let mybutton = document.getElementById("scrollToTop");
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </html>
