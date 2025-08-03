@@ -76,8 +76,8 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(6000, "2025-08-04T00:00:00");
-  setupCountdown(6001, "1900-01-01T23:00:00");
+  setupCountdown(6000, "2025-08-01T00:00:00");
+  setupCountdown(6001, "2025-08-01T00:00:00");
 });
 
 function eventexpired() {
