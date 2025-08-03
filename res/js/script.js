@@ -19,6 +19,7 @@ function openModal(url) {
   // Add event listener to close modal when clicking outside iframe
   setTimeout(function () {
     document.addEventListener("mousedown", outsideModalHandler);
+    setSidebarToggleVisible(false);
   }, 0);
 }
 
@@ -26,6 +27,7 @@ function closeModal() {
   document.getElementById("popupModal").style.display = "none";
   document.getElementById("popupIframe").src = "";
   document.removeEventListener("mousedown", outsideModalHandler);
+  setSidebarToggleVisible(true);
 }
 
 // Handler to close modal when clicking outside the iframe
@@ -41,13 +43,17 @@ function setupCountdown(liId, endDateStr) {
   var li = document.querySelector('li[data-board-id="' + liId + '"]');
   if (!li) return;
 
-  // var countdownSpan = document.createElement("span");
-  // countdownSpan.className = "countdown-timer";
-  // countdownSpan.style.marginLeft = "10px";
-  // countdownSpan.style.fontWeight = "bold";
-  // countdownSpan.style.color = "#d9534f";
-
-  // li.querySelector(".tit").appendChild(countdownSpan);
+  // Create and append countdown span if not already present
+  var tit = li.querySelector(".tit");
+  var countdownSpan = tit.querySelector(".countdown-timer");
+  if (!countdownSpan) {
+    countdownSpan = document.createElement("span");
+    // countdownSpan.className = "countdown-timer";
+    // countdownSpan.style.marginLeft = "10px";
+    // countdownSpan.style.fontWeight = "bold";
+    // countdownSpan.style.color = "#d9534f";
+    // tit.appendChild(countdownSpan);
+  }
 
   var endDate = new Date(endDateStr);
 
@@ -70,8 +76,8 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(6000, "2025-08-01T00:00:00");
-  setupCountdown(6001, "2025-01-01T23:00:00");
+  setupCountdown(6000, "2025-08-04T00:00:00");
+  setupCountdown(6001, "1900-01-01T23:00:00");
 });
 
 function eventexpired() {

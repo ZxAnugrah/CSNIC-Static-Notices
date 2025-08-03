@@ -22,13 +22,14 @@
     <div id="wrap" class="board-view authority-admin">
       <!-- header -->
       <div id="header">
-        <div class="game-title key-color-bg">
-          <a href="https://forum.nexon.com/csnexon/main" title="Counter-Strike Nexon Official Forum">
+        <div class="game-title key-color-bg" id="header-2">
+          <a href="https://forum.nexon.com/csnexon/main" title="Counter-Strike Nexon Official Forum" class="logo-csn">
             <img src="./res/img/logo_2x.png" class="logo-csn-small" />
           </a>
           <a class="btn-play" href="steam://rungameid/273110" title="Already installed? Play now!">Play</a>
           <button class="btn-darkmode" onclick="dark_mode_theme(); dark_mode_text()" id="changetheme">Dark&nbsp;&nbsp;Mode</button>
         </div>
+        <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu">&#9776;</button>
       </div>
 
       <!-- //header -->
@@ -39,25 +40,25 @@
               <li data-board-id="5374" data-board-type="LINK">
                 <a href="https://store.steampowered.com/app/273110" target="_blank">
                   <div class="icon-box">
-                    <i class="icon-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/2048px-Steam_icon_logo.svg.png" alt="" /></i>
+                    <i class="icon-img"><img src="./res/img/icon/ico-steam.png" alt="" /></i>
+                    <span class="tit">Download Game</span>
                   </div>
-                  <span class="tit">Download Game</span>
                 </a>
               </li>
               <li data-board-id="5375" data-board-type="LINK">
                 <a href="https://discord.gg/p9UM5hvr8k" target="_blank">
                   <div class="icon-box">
-                    <i class="icon-img"><img src="https://pngimg.com/d/discord_PNG8.png" alt="" /></i>
+                    <i class="icon-img"><img src="./res/img/icon/ico-discord.png" alt="" /></i>
+                    <span class="tit" title="Join to our Discord server now!">CSNIC Server</span>
                   </div>
-                  <span class="tit" title="Join to our Discord server now!">CSNIC Server</span>
                 </a>
               </li>
               <li data-board-id="5376" data-board-type="LINK">
                 <a href="https://www.facebook.com/groups/csnindonesiacommunity" target="_blank">
                   <div class="icon-box">
-                    <i class="icon-img"><img src="./res/img/facebookpngicof1.png" alt="" /></i>
+                    <i class="icon-img"><img src="./res/img/icon/ico-facebook.png" alt="" /></i>
+                    <span class="tit">CSNIC Group</span>
                   </div>
-                  <span class="tit">CSNIC Group</span>
                 </a>
               </li>
             </ul>
@@ -66,17 +67,17 @@
               <li data-board-id="6000" data-board-type="LINK">
                 <a onclick="openModal('maintenance.htm')" href="javascript:void(0)">
                   <div class="icon-box">
-                    <i class="icon-img"><img src="./res/img/csn-maintenance.png" alt="" /></i>
+                    <i class="icon-img"><img src="./res/img/icon/ico-maintenance.png" alt="" /></i>
+                    <span class="tit">Regular Maintenance</span>
                   </div>
-                  <span class="tit">Regular Maintenance</span>
                 </a>
               </li>
               <li data-board-id="6001" data-board-type="LINK">
                 <a onclick="openModal('temp-maintenance.htm')" href="javascript:void(0)">
                   <div class="icon-box">
-                    <i class="icon-img"><img src="./res/img/csn-temp-maintenance.png" alt="" /></i>
+                    <i class="icon-img"><img src="../res/img/icon/ico-temp-maintenance.png" alt="" /></i>
+                    <span class="tit">Temp. Maintenance</span>
                   </div>
-                  <span class="tit">Temporary Maintenance</span>
                 </a>
               </li>
               <!-- <li>
@@ -90,6 +91,7 @@
             </ul>
           </div>
         </div>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
         <!-- //gnb -->
 
         <!-- contents -->
@@ -575,6 +577,48 @@
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    // ...existing code...
+    // Sidebar toggle for mobile
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const gnb = document.getElementById("gnb");
+    const sidebarOverlay = document.getElementById("sidebarOverlay");
+    sidebarToggle.onclick = function () {
+      gnb.classList.add("open");
+      document.body.classList.add("sidebar-open");
+      sidebarOverlay.classList.add("active");
+    };
+    sidebarToggle.onclick = function () {
+      const isOpen = gnb.classList.contains("open");
+      if (isOpen) {
+        gnb.classList.remove("open");
+        document.body.classList.remove("sidebar-open");
+        sidebarOverlay.classList.remove("active");
+      } else {
+        gnb.classList.add("open");
+        document.body.classList.add("sidebar-open");
+        sidebarOverlay.classList.add("active");
+      }
+    };
+
+    function closeSidebar() {
+      gnb.classList.remove("open");
+      document.body.classList.remove("sidebar-open");
+      sidebarOverlay.classList.remove("active");
+    }
+    document.querySelectorAll("#gnb .menu a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 900) closeSidebar();
+      });
+    });
+
+    function setSidebarToggleVisible(visible) {
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      if (sidebarToggle) {
+        sidebarToggle.style.display = visible ? "flex" : "none";
+      }
     }
   </script>
 </html>
