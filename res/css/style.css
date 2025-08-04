@@ -241,6 +241,13 @@ body {
   min-width: 0; /* Remove or set to 320px for mobile */
   background: #f9f9f9;
 }
+
+body.sidebar-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
 .dark-mode {
   background-color: #242424;
 }
@@ -650,9 +657,58 @@ li h3 {
 }
 
 .icon-box .tit {
-  font-size: 1rem;
   word-break: break-word;
   flex: 1;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .view-box .txt .contents-box,
+  .view-box .txt .contents-box > div {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  .view-box .txt ul,
+  .view-box .txt li {
+    font-size: 15px !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    word-break: break-word;
+  }
+  .view-box .txt img,
+  .view-box .txt .border-epic,
+  .view-box .txt .border-legend,
+  .view-box .txt .border-transcendence,
+  .view-box .txt .border-unique,
+  .view-box .txt .border-rare,
+  .view-box .txt .border-advanced,
+  .view-box .txt .map-resize-small,
+  .view-box .txt .map-resize-small-rotate {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 10px auto !important;
+    display: block;
+  }
+  .youtube-iframe {
+    width: 100% !important;
+    height: 220px !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    margin: 10px 0 !important;
+  }
+  .view-box .txt h2,
+  .view-box .txt h5 {
+    font-size: 1.1em !important;
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+  }
+  .view-box .txt p,
+  .view-box .txt span {
+    font-size: 15px !important;
+    line-height: 1.5em !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -887,6 +943,35 @@ li h3 {
   font-weight: lighter;
   color: #f8f9fa;
   opacity: 0.3;
+}
+
+@media (max-width: 900px) {
+  #footer {
+    padding: 16px 8px;
+    font-size: 11px;
+    text-align: center;
+  }
+  #footer .logo-nexon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  #footer .logo-nexon img {
+    width: 60px;
+    height: auto;
+    margin: 0 0 6px 0;
+  }
+  #footer .logo-nexon span {
+    display: block;
+    font-size: 11px;
+    margin-top: 0;
+    text-align: center;
+    height: auto;
+    color: #626465;
+    word-break: break-word;
+  }
 }
 
 /* common style & board default */
@@ -7783,6 +7868,13 @@ hr.bold {
   gap: 32px;
   align-items: flex-start;
   justify-content: center;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 .iframe-side {

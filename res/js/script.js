@@ -20,6 +20,7 @@ function openModal(url) {
   setTimeout(function () {
     document.addEventListener("mousedown", outsideModalHandler);
     setSidebarToggleVisible(false);
+    document.body.classList.add("modal-open");
   }, 0);
 }
 
@@ -28,6 +29,7 @@ function closeModal() {
   document.getElementById("popupIframe").src = "";
   document.removeEventListener("mousedown", outsideModalHandler);
   setSidebarToggleVisible(true);
+  document.body.classList.remove("modal-open");
 }
 
 // Handler to close modal when clicking outside the iframe
@@ -76,7 +78,7 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(6000, "2025-08-01T00:00:00");
+  setupCountdown(6000, "2025-08-01T14:00:00");
   setupCountdown(6001, "2025-08-01T00:00:00");
 });
 
