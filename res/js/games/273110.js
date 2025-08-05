@@ -19,7 +19,7 @@ fetch(PROXY_URL + API_URL)
                     <div class="news-content">${contents}</div>
                     <small class="news-date">Posted: ${new Date(item.date * 1000).toLocaleString()}</small>
                 </div>
-            </a>
+            </a>            
         `;
       });
     } else {
