@@ -7634,13 +7634,14 @@ html:lang(th) #gradeHistoryPop li dt {
   height: auto;
   border-radius: 2px;
   text-align: center;
-  background-color: dimgrey;
+  /* background-color: dimgrey; */
   padding: 10px;
+  filter: invert(100%);
 }
 
 .btn-darkmode:hover {
   color: white;
-  background-color: #919191;
+  background: #dfdfdf;
 }
 
 .btn-lightmode {
@@ -7652,9 +7653,9 @@ html:lang(th) #gradeHistoryPop li dt {
   height: auto;
   border-radius: 2px;
   text-align: center;
-  background-color: black;
-  padding: 9px;
-  border: 1px solid white;
+  /* background-color: dimgrey; */
+  padding: 10px;
+  filter: invert(100%);
 }
 
 .btn-play {
@@ -8041,7 +8042,7 @@ li[data-board-id][style*="display: none"] {
 @media (max-width: 375px) {
   .btn-darkmode {
     margin: 25px 30px 10px 10px;
-    float: left;
+    display: none;
     color: white;
     font-weight: bold;
     width: auto;

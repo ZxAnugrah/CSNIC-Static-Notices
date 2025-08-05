@@ -4,9 +4,9 @@ function dark_mode_theme() {
 
   var x = document.getElementById("changetheme");
   if (x.innerHTML === "Dark&nbsp;&nbsp;Mode") {
-    x.innerHTML = "Light&nbsp;Mode";
+    x.innerHTML = `<img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />`;
   } else {
-    x.innerHTML = "Dark&nbsp;&nbsp;Mode";
+    x.innerHTML = `<img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />`;
   }
 
   var element = document.getElementById("changetheme");
