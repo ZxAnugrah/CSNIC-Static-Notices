@@ -29,11 +29,11 @@ fetch(PROXY_URL + API_URL)
   .catch((error) => {
     console.error("Error:", error);
     document.getElementById("steam-news").innerHTML = `
-      <p>Failed to load news. Try:</p>
-      <ul>
-        <li>Check if <a href="${API_URL}" target="_blank">this link</a> works.</li>
-        <li>Disable ad-blockers.</li>
-        <li>Use a backend (Node.js/PHP) instead.</li>
-      </ul>
+      <p>Failed to load news. Try open this sites, and press the button. After that, refresh this pages.</p>
+      <a onclick="openModal('https://cors-anywhere.herokuapp.com/corsdemo')" href="javascript:void(0)">
+        <div class="icon-box">
+            <span class="tit">Open site</span>
+        </div>
+      </a>
     `;
   });
