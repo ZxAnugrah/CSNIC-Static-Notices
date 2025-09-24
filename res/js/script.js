@@ -79,7 +79,7 @@ function setupCountdown(liId, endDateStr) {
 
 document.addEventListener("DOMContentLoaded", function () {
   setupCountdown(6000, "2025-09-17T13:00:00");
-  setupCountdown(6001, "2025-08-06T14:00:00");
+  setupCountdown(6001, "2025-09-25T12:00:00");
 });
 
 function eventexpired() {
