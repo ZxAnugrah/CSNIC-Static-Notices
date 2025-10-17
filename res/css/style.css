@@ -7708,6 +7708,28 @@ hr.bold {
   rotate: 4deg;
 }
 
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
+
+.p-normal-tr-box {
+  font-family: Arial;
+  font-size: 10pt;
+  text-align: center;
+  line-height: 13.5pt;
+  margin: 0px;
+  word-break: keep-all;
+}
+
 .border-epic {
   background: #4e2440;
   border-bottom: 2px;
@@ -7815,6 +7837,27 @@ hr.bold {
 }
 .dark-mode #scrollToTop:hover {
   background-color: #555;
+  color: white;
+}
+
+.dark-mode .MsoTableGrid {
+  color: white;
+}
+
+.dark-mode .border-box-content {
+  border: 1px solid gray;
+}
+
+.dark-mode .tr-box-title {
+  border: 1px solid gray;
+  background: rgb(87, 87, 87);
+}
+
+.dark-mode .p-normal-tr-box .text-box-content {
+  color: white;
+}
+
+.dark-mode .span-text-title-box {
   color: white;
 }
 
