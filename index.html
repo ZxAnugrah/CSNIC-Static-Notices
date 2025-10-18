@@ -19,6 +19,8 @@
     <script src="./res/js/games/273110/counterstrikenexon.js"></script>
     <script src="./res/js/games/273110/medal-loader.js"></script>
     <script src="./res/js/games/273110/weapon-loader.js"></script>
+    <script src="./res/js/games/273110/class-loader.js"></script>
+    <script src="./res/js/games/273110/map-loader.js"></script>
     <style data-styled="active" data-styled-version="5.3.11"></style>
   </head>
 
@@ -190,67 +192,32 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <span lang="EN-US" style="font-size: 11pt">
                       <span style="line-height: 107%">
-                        <ul>
-                          <h5>Weapon: Noah I</h5>
-                          <img class="border-rare" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol1.png" style="width: 240px" />
-                          <li>Deskripsi: Sebuah machine gun dengan magazine besar berisi 100 peluru. Sebuah versi awal dan tidak memiliki efek spesial.</li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 400px" />
+                          </colgroup>
+                          <tbody id="weapon-section-30-10-25">
+                            <!-- Weapons will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Weapon: Noah II</h5>
-                          <img class="border-unique" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol2.png" style="width: 240px" />
-                          <li>Deskripsi: Sebuah sinyal satelit machine gun dengan magazine besar berisi 150 peluru. Jika kamu meneruskan serangan normal, akan menerima koordinat satelit dan melakukan serangan jarak jauh pada target.</li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                          </colgroup>
+                          <tbody id="map-section-30-10-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Weapon: Noah III</h5>
-                          <img class="border-unique" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol3.png" style="width: 240px" />
-                          <li>Deskripsi: Sebuah sinyal satelit machine gun dengan magazine besar berisi 150 peluru. Jika kamu meneruskan serangan normal, akan menerima koordinat satelit dan melakukan serangan jarak jauh pada target.</li>
-                        </ul>
-                        <br />
-                        <ul>
-                          <h5>Weapon: Noah IV</h5>
-                          <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol4.png" style="width: 240px" />
-                          <li>
-                            Deskripsi: Sebuah sinyal satelit machine gun dengan magazine besar berisi 200 peluru. Jika kamu meneruskan serangan normal, akan menerima koordinat satelit dan melakukan serangan jarak jauh pada target. Selain
-                            itu, jika kamu mengisi peluru spesial dan menembakkan satellite signal flare, peluru tersebut akan mengenai musuh untuk pertama kalinya dan mengenai musuh di area sekitar untuk kedua kalinya.
-                          </li>
-                        </ul>
-                        <br />
-                        <ul>
-                          <h5>Weapon: Noah V</h5>
-                          <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol5.png" style="width: 240px" />
-                          <li>
-                            Deskripsi: Sebuah sinyal satelit machine gun dengan magazine besar berisi 200 peluru. Jika kamu meneruskan serangan normal, akan menerima koordinat satelit dan melakukan serangan jarak jauh pada target. Selain
-                            itu, jika kamu mengisi peluru spesial dan menembakkan satellite signal flare, peluru tersebut akan mengenai musuh untuk pertama kalinya dan mengenai musuh di area sekitar untuk kedua kalinya.
-                          </li>
-                        </ul>
-                        <br />
-                        <ul>
-                          <h5>Weapon: Noah VI</h5>
-                          <img class="border-legend" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol6.png" style="width: 240px" />
-                          <li>
-                            Deskripsi: Sebuah sinyal satelit machine gun dengan magazine besar berisi 350 peluru. Jika kamu meneruskan serangan normal, akan menerima koordinat satelit dan melakukan serangan jarak jauh pada target. Selain
-                            itu, jika kamu mengisi peluru spesial dan menembakkan satellite signal flare, peluru tersebut akan mengenai musuh untuk pertama kalinya dan mengenai musuh di area sekitar untuk kedua kalinya. Terakhir, kamu dapat
-                            menggunakan Rock Armor yang bertahan melawan serangan zombie.
-                          </li>
-                        </ul>
-                        <br />
-                        <ul>
-                          <h5>Map: Fish Market</h5>
-                          <img class="map-resize-small" src="./res/img/_temp/loadingbg_zm_fishmart.png" />
-                          <li>Lokasi: Pasar Ikan Dermaga.</li>
-                        </ul>
-                        <hr />
                         <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
                           <colgroup>
                             <col style="width: 250px" />
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-
-                          <!-- medal section -->
-
                           <tbody id="medal-section-30-10-25">
                             <!-- Medals will be dynamically inserted here -->
                           </tbody>
@@ -956,8 +923,6 @@
     }
   </script>
   <script>
-    // ...existing code...
-    // Sidebar toggle for mobile
     const sidebarToggle = document.getElementById("sidebarToggle");
     const sidebarToggleIcon = document.getElementById("sidebarToggleIcon");
     const gnb = document.getElementById("gnb");
@@ -997,15 +962,4 @@
       }
     }
   </script>
-
-  <!-- medal section -->
-
-  <!-- October 30th, 2025 -->
-  <!-- <script src="./res/js/games/273110/30-10-2025/script-medal.js"></script> -->
-
-  <!-- October 1st, 2025 -->
-  <!-- <script src="./res/js/games/273110/01-10-2025/script-medal.js"></script> -->
-
-  <!-- September 3rd, 2025 -->
-  <!-- <script src="./res/js/games/273110/03-09-2025/script-medal.js"></script> -->
 </html>

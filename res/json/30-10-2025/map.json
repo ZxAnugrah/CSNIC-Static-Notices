@@ -1,0 +1,9 @@
+{
+  "maps": [
+    {
+      "image": "./res/img/_temp/maps/zm_fishmart_cso.png",
+      "name": "Fish Market/Fish Mart",
+      "location": "Pasar ikan dermaga."
+    }
+  ]
+}
