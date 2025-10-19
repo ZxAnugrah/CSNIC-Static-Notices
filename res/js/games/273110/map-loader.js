@@ -59,11 +59,11 @@ async function loadAllmaps() {
               <span style="font-weight:bold">${map.name}</span>
               <br />
             </p>
+          </td>
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content" style="font-size:11px">${map.location}</span>
             </p>
-          </td>
           </td>
         `;
         section.appendChild(row);

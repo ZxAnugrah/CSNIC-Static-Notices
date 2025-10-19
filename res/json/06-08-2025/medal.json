@@ -1,0 +1,52 @@
+{
+  "medals": [
+    {
+      "name": "Never-ending Battlefield",
+      "description": "Medal yang diberikan untuk pejuang yang terus bangkit, meski medan perang tak pernah berhenti—bahkan setelah pertempuran tak terhitung.",
+      "honor": 0,
+      "image": "//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801251557"
+    },
+    {
+      "name": "Military Supplies Broker",
+      "description": "Beli senjata di Zombie Scenario 1000 kali.",
+      "honor": 10,
+      "image": "//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801251561"
+    },
+    {
+      "name": "Witch Hunt",
+      "description": "Medal yang diberikan setelah memperoleh Bloody the Witch of Blood, Luna the Witch of Night, Witch Hat, dan Witch Broomstick.",
+      "honor": 10,
+      "image": "//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801251573"
+    },
+    {
+      "name": "Swatterest",
+      "description": "Skor 300 kill Mosquito.",
+      "honor": 10,
+      "image": "//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801251562"
+    },
+    {
+      "name": "Fantastic Duo",
+      "description": "Medal yang diperoleh setelah menyelesaikan permintaan dari Alin dan Dominique.",
+      "honor": 10,
+      "image": ""
+    },
+    {
+      "name": "We Are Professionals",
+      "description": "Medal yang diperoleh setelah menyelesaikan permintaan dari gamer dan streamer profesional.",
+      "honor": 10,
+      "image": ""
+    },
+    {
+      "name": "Dexterity is Only Helping",
+      "description": "Medal yang diberikan kepada mereka yang telah menyelesaikan permintaan dari si Cekatan dan orang di sampingnya.",
+      "honor": 10,
+      "image": ""
+    },
+    {
+      "name": "Today is Our Day 1",
+      "description": "Medal pencapaian untuk penggemar yang mewujudkan mimpi dengan menyelesaikan misi idol.",
+      "honor": 10,
+      "image": ""
+    }
+  ]
+}

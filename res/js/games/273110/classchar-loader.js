@@ -1,18 +1,18 @@
-async function loadAllcharacters() {
-  // Select all character sections (e.g. character-section-03-09-25)
-  const characterSections = document.querySelectorAll('[id^="character-section-"]');
-  if (!characterSections.length) return;
+async function loadAllclasschars() {
+  // Select all classchar sections (e.g. classchar-section-03-09-25)
+  const classcharSections = document.querySelectorAll('[id^="classchar-section-"]');
+  if (!classcharSections.length) return;
 
-  for (const section of characterSections) {
-    const sectionId = section.id; // character-section-03-09-25
-    const datePart = sectionId.replace("character-section-", ""); // 03-09-25
-    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/character.json`;
+  for (const section of classcharSections) {
+    const sectionId = section.id; // classchar-section-03-09-25
+    const datePart = sectionId.replace("classchar-section-", ""); // 03-09-25
+    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
       <tr>
         <td colspan="2" style="text-align:center; padding:10px; font-style:italic; color:#999;">
-          Loading characters for ${datePart}...
+          Loading classchars for ${datePart}...
         </td>
       </tr>
     `;
@@ -22,7 +22,7 @@ async function loadAllcharacters() {
       if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
 
       const data = await response.json();
-      const characters = data.characters;
+      const classchars = data.classchars;
 
       // Insert header
       section.innerHTML = `
@@ -47,24 +47,26 @@ async function loadAllcharacters() {
         </tr>
       `;
 
-      // Append characters
-      characters.forEach((character) => {
+      // Append classchars
+      classchars.forEach((classchar) => {
+        const sectionColor = classchar.section === "CT" ? "#3498db" : classchar.section === "TR" ? "#e74c3c" : "#95a5a6";
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${character.image}" style="width: 440px" />
+                <img src="${classchar.image}" style="width: 440px; margin-top: 8px" />
+                <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -25px;margin-top: 10px">${classchar.section}</span>
               </span><br />
-              <span style="font-weight:bold">${character.name}</span>
+              <span style="font-weight:bold">${classchar.name}</span>
               <br />
-              <span>[${character.grade}]</span>
-            </p>
-          <td class="border-box-content">
-            <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content" style="font-size:11px">${character.description}</span>
+              <span>[${classchar.grade}]</span>
             </p>
           </td>
+          <td class="border-box-content">
+            <p class="MsoNormal p-normal-tr-box">
+              <span class="text-box-content" style="font-size:11px">${classchar.description}</span>
+            </p>
           </td>
         `;
         section.appendChild(row);
@@ -74,7 +76,7 @@ async function loadAllcharacters() {
       section.innerHTML = `
         <tr>
           <td colspan="3" style="text-align:center; padding: 15px; color:#e74c3c;">
-            ⚠️ Unable to load characters for ${datePart}
+            ⚠️ Unable to load classchars for ${datePart}
           </td>
         </tr>
       `;
@@ -82,4 +84,4 @@ async function loadAllcharacters() {
   }
 }
 
-window.addEventListener("DOMContentLoaded", loadAllcharacters);
+window.addEventListener("DOMContentLoaded", loadAllclasschars);

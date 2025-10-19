@@ -1,0 +1,40 @@
+{
+  "weapons": [
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame1.png",
+      "name": "Murasame I",
+      "grade": "Rare",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Dapat mengakibatkan damage pada musuh di sekitarnya melalui serangan beruntun."
+    },
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame2.png",
+      "name": "Murasame II",
+      "grade": "Unique",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Performa telah ditingkatkan dari Murasame I. Dapat memberikan damage pada musuh di sekitarnya melalui serangan beruntun, atau memberikan damage pada musuh di depan dengan gerakan drawing sword."
+    },
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame3.png",
+      "name": "Murasame III",
+      "grade": "Unique",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Performa telah ditingkatkan dari Murasame II. Dapat memberikan damage pada musuh di sekitarnya melalui serangan beruntun, atau memberikan damage pada musuh di depan dengan gerakan drawing sword."
+    },
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame4.png",
+      "name": "Murasame IV",
+      "grade": "Transcendence",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Performa telah ditingkatkan dari Murasame III. Dapat memberikan damage pada musuh di sekelilingnya dengan serangan beruntun, memberikan damage dan menahan serangan musuh di depan melalui gerakan drawing sword, serta menarik musuh di sekitar untuk memberikan damage yang kuat."
+    },
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame5.png",
+      "name": "Murasame V",
+      "grade": "Transcendence",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Performa telah ditingkatkan dari Murasame IV. Dapat memberikan damage pada musuh di sekelilingnya dengan serangan beruntun, memberikan damage dan menahan serangan musuh di depan melalui gerakan drawing sword, serta menarik musuh di sekitar untuk memberikan damage yang kuat."
+    },
+    {
+      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/murasame6.png",
+      "name": "Murasame VI",
+      "grade": "Legendary",
+      "description": "Sebilah pedang yang terbuat dari paduan generasi terbaru menggunakan teknologi Aegis Research Institute. Performa telah ditingkatkan dari Murasame V. Dapat memberikan damage pada musuh di sekelilingnya dengan serangan beruntun, memberikan damage dan menahan serangan musuh di depan melalui gerakan drawing sword, serta menarik musuh di sekitar untuk memberikan damage yang kuat, serta memberikan efek invincibilty saat menggunakan Massacre."
+    }
+  ]
+}

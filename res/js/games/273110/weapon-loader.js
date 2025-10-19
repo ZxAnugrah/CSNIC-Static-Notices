@@ -60,11 +60,11 @@ async function loadAllweapons() {
               <br />
               <span>[${weapon.grade}]</span>
             </p>
+          </td>
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content" style="font-size:11px">${weapon.description}</span>
             </p>
-          </td>
           </td>
         `;
         section.appendChild(row);
