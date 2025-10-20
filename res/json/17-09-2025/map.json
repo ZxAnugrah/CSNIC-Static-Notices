@@ -1,0 +1,10 @@
+{
+  "maps": [
+    {
+      "image": "./res/img/_temp/maps/ze_exodus_cso.png",
+      "name": "Exodus",
+      "mode": "Zombie Escape",
+      "location": "Shelter."
+    }
+  ]
+}

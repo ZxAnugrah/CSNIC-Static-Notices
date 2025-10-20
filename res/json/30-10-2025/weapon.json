@@ -10,12 +10,14 @@
       "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol2.png",
       "name": "Noah II",
       "grade": "Unique",
+      "part": true,
       "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah I. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
     },
     {
       "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol3.png",
       "name": "Noah III",
       "grade": "Unique",
+      "part": true,
       "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah II. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
     },
     {

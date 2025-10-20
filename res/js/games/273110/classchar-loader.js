@@ -50,17 +50,33 @@ async function loadAllclasschars() {
       // Append classchars
       classchars.forEach((classchar) => {
         const sectionColor = classchar.section === "CT" ? "#3498db" : classchar.section === "TR" ? "#e74c3c" : "#95a5a6";
+        const gradeColor =
+          classchar.grade === "Epic"
+            ? "#ff1cc4"
+            : classchar.grade === "Legendary"
+            ? "#300580"
+            : classchar.grade === "Transcendence"
+            ? "#cb8f0f"
+            : classchar.grade === "Unique"
+            ? "#b92222ff"
+            : classchar.grade === "Rare"
+            ? "#0b62aa"
+            : classchar.grade === "Advanced"
+            ? "#0e7216"
+            : classchar.grade === "Basic"
+            ? "#bbbbbbff"
+            : "#000000ff";
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
                 <img src="${classchar.image}" style="width: 440px; margin-top: 8px" />
-                <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -25px;margin-top: 10px">${classchar.section}</span>
+                <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -25px;margin-top: 10px; text-shadow: 1px 1px 1px #ffffff65">${classchar.section}</span>
               </span><br />
               <span style="font-weight:bold">${classchar.name}</span>
               <br />
-              <span>[${classchar.grade}]</span>
+              <span style="font-weight: bold; color: ${gradeColor}; text-shadow: 1px 1px 1px #ffffff65">[${classchar.grade}]</span>
             </p>
           </td>
           <td class="border-box-content">

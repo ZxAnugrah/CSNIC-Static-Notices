@@ -3,6 +3,7 @@
     {
       "image": "./res/img/_temp/maps/zm_fishmart_cso.png",
       "name": "Fish Market/Fish Mart",
+      "mode": "Normal",
       "location": "Pasar ikan dermaga."
     }
   ]

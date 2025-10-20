@@ -58,6 +58,8 @@ async function loadAllmaps() {
               </span><br />
               <span style="font-weight:bold">${map.name}</span>
               <br />
+              <span>${map.mode}</span>
+              <br />
             </p>
           </td>
           <td class="border-box-content">

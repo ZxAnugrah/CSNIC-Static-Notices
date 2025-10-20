@@ -28,25 +28,25 @@
       "name": "Fantastic Duo",
       "description": "Medal yang diperoleh setelah menyelesaikan permintaan dari Alin dan Dominique.",
       "honor": 10,
-      "image": ""
+      "image": "./res/img/_temp/medals/Request01_l.png"
     },
     {
       "name": "We Are Professionals",
       "description": "Medal yang diperoleh setelah menyelesaikan permintaan dari gamer dan streamer profesional.",
       "honor": 10,
-      "image": ""
+      "image": "./res/img/_temp/medals/Request02_l.png"
     },
     {
       "name": "Dexterity is Only Helping",
       "description": "Medal yang diberikan kepada mereka yang telah menyelesaikan permintaan dari si Cekatan dan orang di sampingnya.",
       "honor": 10,
-      "image": ""
+      "image": "./res/img/_temp/medals/Request03_l.png"
     },
     {
       "name": "Today is Our Day 1",
       "description": "Medal pencapaian untuk penggemar yang mewujudkan mimpi dengan menyelesaikan misi idol.",
       "honor": 10,
-      "image": ""
+      "image": "./res/img/_temp/medals/Request04_l.png"
     }
   ]
 }

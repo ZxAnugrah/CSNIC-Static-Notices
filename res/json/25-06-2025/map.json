@@ -1,0 +1,10 @@
+{
+  "maps": [
+    {
+      "image": "./res/img/_temp/maps/dm_dam_cso.png",
+      "name": "Dam",
+      "mode": "Normal",
+      "location": "Pegunungan."
+    }
+  ]
+}

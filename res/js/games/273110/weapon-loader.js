@@ -49,6 +49,22 @@ async function loadAllweapons() {
 
       // Append weapons
       weapons.forEach((weapon) => {
+        const gradeColor =
+          weapon.grade === "Epic"
+            ? "#ff1cc4"
+            : weapon.grade === "Legendary"
+            ? "#590fe4ff"
+            : weapon.grade === "Transcendence"
+            ? "#cb8f0f"
+            : weapon.grade === "Unique"
+            ? "#e02c2cff"
+            : weapon.grade === "Rare"
+            ? "#0b62aa"
+            : weapon.grade === "Advanced"
+            ? "#0e7216"
+            : weapon.grade === "Basic"
+            ? "#bbbbbbff"
+            : "#000000ff";
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
@@ -56,9 +72,12 @@ async function loadAllweapons() {
               <span class="text-box-content">
                 <img src="${weapon.image}" style="width: 440px" />
               </span><br />
-              <span style="font-weight:bold">${weapon.name}</span>
+              <span style="font-weight:bold">
+                ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Dapat dipasang Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
+                ${weapon.name}
+              </span>
               <br />
-              <span>[${weapon.grade}]</span>
+              <span style="font-weight: bold; color: ${gradeColor};">[${weapon.grade}]</span>
             </p>
           </td>
           <td class="border-box-content">
