@@ -22,7 +22,9 @@ async function loadAllclasschars() {
       if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
 
       const data = await response.json();
-      const classchars = data.classchars;
+      const classchars = Object.keys(data)
+        .filter((key) => !isNaN(key))
+        .map((key) => data[key]);
 
       // Insert header
       section.innerHTML = `
@@ -49,7 +51,7 @@ async function loadAllclasschars() {
 
       // Append classchars
       classchars.forEach((classchar) => {
-        const sectionColor = classchar.section === "CT" ? "#3498db" : classchar.section === "TR" ? "#e74c3c" : "#95a5a6";
+        const sectionColor = classchar.section === "CT" ? "#2489ccff" : classchar.section === "TR" ? "#d12a17ff" : "#95a5a6";
         const gradeColor =
           classchar.grade === "Epic"
             ? "#ff1cc4"
@@ -72,11 +74,11 @@ async function loadAllclasschars() {
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
                 <img src="${classchar.image}" style="width: 440px; margin-top: 8px" />
-                <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -25px;margin-top: 10px; text-shadow: 1px 1px 1px #ffffff65">${classchar.section}</span>
+                <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -40px; padding: 10px; font-size: 15px">${classchar.section}</span>
               </span><br />
               <span style="font-weight:bold">${classchar.name}</span>
               <br />
-              <span style="font-weight: bold; color: ${gradeColor}; text-shadow: 1px 1px 1px #ffffff65">[${classchar.grade}]</span>
+              <span style="font-weight: bold; color: ${gradeColor}">[${classchar.grade}]</span>
             </p>
           </td>
           <td class="border-box-content">

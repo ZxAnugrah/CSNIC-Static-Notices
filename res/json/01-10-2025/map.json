@@ -1,10 +1,8 @@
 {
-  "maps": [
-    {
-      "image": "./res/img/_temp/maps/dm_outletstore_cso.png",
-      "name": "Discount Store/Outlets",
-      "mode": "Normal",
-      "location": "Pusat perbelanjaan di pinggiran kota."
-    }
-  ]
+  "0": {
+    "image": "./res/img/_temp/maps/dm_outletstore_cso.png",
+    "name": "Discount Store/Outlets",
+    "mode": "Normal",
+    "location": "Pusat perbelanjaan di pinggiran kota."
+  }
 }

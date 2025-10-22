@@ -80,6 +80,12 @@ function setupCountdown(liId, endDateStr) {
 document.addEventListener("DOMContentLoaded", function () {
   setupCountdown(6000, "2025-10-01T14:00:00");
   setupCountdown(6001, "2025-09-25T12:00:00");
+
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.body.classList.add("dark-mode");
+    const themeButton = document.getElementById("changetheme");
+    if (themeButton) themeButton.classList.add("btn-lightmode");
+  }
 });
 
 function eventexpired() {

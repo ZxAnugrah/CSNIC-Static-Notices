@@ -1,42 +1,40 @@
 {
-  "weapons": [
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol1.png",
-      "name": "Noah I",
-      "grade": "Rare",
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya."
-    },
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol2.png",
-      "name": "Noah II",
-      "grade": "Unique",
-      "part": true,
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah I. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
-    },
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol3.png",
-      "name": "Noah III",
-      "grade": "Unique",
-      "part": true,
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah II. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
-    },
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol4.png",
-      "name": "Noah IV",
-      "grade": "Transcendence",
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah III. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah."
-    },
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol5.png",
-      "name": "Noah V",
-      "grade": "Transcendence",
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah III. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah."
-    },
-    {
-      "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol6.png",
-      "name": "Noah VI",
-      "grade": "Legendary",
-      "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah V. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah. Terakhir, kamu dapat menggunakan Rock Armor yang bertahan melawan serangan zombie."
-    }
-  ]
+  "0": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol1.png",
+    "name": "Noah I",
+    "grade": "Rare",
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya."
+  },
+  "1": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol2.png",
+    "name": "Noah II",
+    "grade": "Unique",
+    "part": true,
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah I. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
+  },
+  "2": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol3.png",
+    "name": "Noah III",
+    "grade": "Unique",
+    "part": true,
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah II. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump."
+  },
+  "3": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol4.png",
+    "name": "Noah IV",
+    "grade": "Transcendence",
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah III. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah."
+  },
+  "4": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol5.png",
+    "name": "Noah V",
+    "grade": "Transcendence",
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah III. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah."
+  },
+  "5": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/gnomepistol6.png",
+    "name": "Noah VI",
+    "grade": "Legendary",
+    "description": "Sebuah pistol yang dijiwai oleh roh bumi dan telah ditingkatkan dari Noah V. Menembakkan sebuah pecahan-pecahan tanah seperti peluru, memberikan damage pada target disekitarnya. Dan menggunakan energi roh yang diisi ulang secara otomatis untuk menghancurkan zombie dan memperoleh movement speed serta buff double jump, atau menembakkan ledakan energi untuk memberikan damage pada musuh yang jauh serta menarik mereka ke tengah. Terakhir, kamu dapat menggunakan Rock Armor yang bertahan melawan serangan zombie."
+  }
 }

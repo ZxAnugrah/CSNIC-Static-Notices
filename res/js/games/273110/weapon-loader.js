@@ -22,7 +22,9 @@ async function loadAllweapons() {
       if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
 
       const data = await response.json();
-      const weapons = data.weapons;
+      const weapons = Object.keys(data)
+        .filter((key) => !isNaN(key))
+        .map((key) => data[key]);
 
       // Insert header
       section.innerHTML = `

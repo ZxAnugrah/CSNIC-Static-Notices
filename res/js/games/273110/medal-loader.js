@@ -22,7 +22,9 @@ async function loadAllMedals() {
       if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
 
       const data = await response.json();
-      const medals = data.medals;
+      const medals = Object.keys(data)
+        .filter((key) => !isNaN(key))
+        .map((key) => data[key]);
 
       // Insert header
       section.innerHTML = `

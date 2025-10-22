@@ -22,9 +22,10 @@ async function loadAllmaps() {
       if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
 
       const data = await response.json();
-      const maps = data.maps;
+      const maps = Object.keys(data)
+        .filter((key) => !isNaN(key))
+        .map((key) => data[key]);
 
-      // Insert header
       section.innerHTML = `
         <tr>
           <td class="tr-box-title" colspan="2">
@@ -33,7 +34,7 @@ async function loadAllmaps() {
             </p>
           </td>
         </tr>
-        <tr >
+        <tr>
           <td class="tr-box-title">
             <p class="MsoNormal p-normal-tr-box">
               <span class="span-text-title-box">Preview</span>
@@ -41,30 +42,30 @@ async function loadAllmaps() {
           </td>
           <td class="tr-box-title">
             <p class="MsoNormal p-normal-tr-box">
-              <span class="span-text-title-box">Lokasi</span>
+              <span class="span-text-title-box">Lokasi / Deskripsi</span>
             </p>
           </td>
         </tr>
       `;
 
-      // Append maps
       maps.forEach((map) => {
         const row = document.createElement("tr");
+        let imageHTML = `<img src="${map.image}" style="width: 220px" />`;
+        if (map.image2) {
+          imageHTML += `<br /><img src="${map.image2}" style="width: 220px; margin-top: 6px;" />`;
+        }
+        const textInfo = map.location ? map.location : map.description || "—";
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content">
-                <img src="${map.image}" style="width: 220px" />
-              </span><br />
-              <span style="font-weight:bold">${map.name}</span>
-              <br />
+              <span class="text-box-content">${imageHTML}</span><br />
+              <span style="font-weight:bold">${map.name}</span><br />
               <span>${map.mode}</span>
-              <br />
             </p>
           </td>
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content" style="font-size:11px">${map.location}</span>
+              <span class="text-box-content" style="font-size:11px">${textInfo}</span>
             </p>
           </td>
         `;

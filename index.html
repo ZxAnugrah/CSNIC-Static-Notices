@@ -124,11 +124,14 @@
               <dl class="article-info">
                 <dd class="writer">Counter Strike Nexon Indonesia Community</dd>
                 <dd>
-                  <span class="date">Terakhir update: 21 Oktober 2025</span>
+                  <span class="date">Terakhir update: 22 Oktober 2025</span>
                 </dd>
               </dl>
             </div>
 
+            <button class="btn-darkmode-floating" onclick="dark_mode_theme(); dark_mode_text()" id="changetheme-floating" title="Toggle dark mode">
+              <img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />
+            </button>
             <button onclick="topFunction()" id="scrollToTop" title="Go to top">&uarr;</button>
 
             <div class="view-box">
@@ -138,46 +141,7 @@
                     <img src="./res/img/en-announcement.png" />
                   </p>
                   <hr class="bold" />
-                  <!-- <div>
-                    <p class="text-warning text-bold">[This information based from official CSN Announcement]</p>
-                    <div>
-                      <hr />
-                      <h2 class="text-bold">[Event] DevTalk Video Reveal Event Notice</h2>
-                      <hr />
-                      <p class="text-bold">Periode Event:</p>
-                      <ul class="">
-                        <li>5 Juli <span class="text-bold text-underline">(18:00 GMT +7)</span> - 23 Juli <span class="text-bold text-underline">(09:00 WIB GMT +7)</span></li>
-                      </ul>
-                      <br />
-                      <p class="text-bold">Hadiah:</p>
-                      <ul class="">
-                        <li>Transcendence Decoder (3x)</li>
-                        <li>Class Decoder (3x)</li>
-                        <li>[ZHC] Advanced Decoder (3x)</li>
-                      </ul>
-                      <br />
-                      <p class="text-bold">Cara memperoleh:</p>
-                      <ul class="">
-                        <li>Tetap online selama 10 menit.</li>
-                        <li>Hadiah hanya bisa diperoleh satu kali per akun.</li>
-                      </ul>
-                      <hr />
-                      <ul>
-                        <a href="https://store.steampowered.com/news/app/273110/view/539983683367470203?l=english" class="color-gray text-bold" target="_blank" title="Klik untuk melihat pengumuman official."
-                          >Official Announcement CSN (Steam)
-                        </a>
-                        <br />
-                        <iframe
-                          class="youtube-iframe"
-                          src="https://www.youtube.com/embed/xsd7aN-9LJk"
-                          title="Director&#39;s Commentary- New Epic Weapon &amp; Summer Update!"
-                          frameborder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerpolicy="strict-origin-when-cross-origin"
-                          allowfullscreen></iframe>
-                      </ul>
-                    </div>
-                  </div> -->
+
                   <div class="news-container" id="steam-news">
                     <h2>Steam News</h2>
                     <!-- News will be loaded here -->
@@ -192,7 +156,7 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <span lang="EN-US" style="font-size: 11pt">
                       <span style="line-height: 107%">
-                        Coming Soon!
+                        Coming soon!
                         <br />
                       </span>
                     </span>
@@ -222,7 +186,9 @@
                             <col style="width: 200px" />
                             <col style="width: 200px" />
                           </colgroup>
-                          <tbody id="map-section-01-10-25"></tbody>
+                          <tbody id="map-section-01-10-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                         <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
@@ -231,7 +197,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-01-10-25"></tbody>
+                          <tbody id="medal-section-01-10-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                       </span>
                     </span>
@@ -251,7 +219,9 @@
                             <col style="width: 200px" />
                             <col style="width: 200px" />
                           </colgroup>
-                          <tbody id="map-section-17-09-25"></tbody>
+                          <tbody id="map-section-17-09-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -283,7 +253,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-03-09-25"></tbody>
+                          <tbody id="medal-section-03-09-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -325,7 +297,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-06-08-25"></tbody>
+                          <tbody id="medal-section-06-08-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -357,7 +331,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-10-07-25"></tbody>
+                          <tbody id="medal-section-10-07-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -389,7 +365,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-07-07-25"></tbody>
+                          <tbody id="medal-section-07-07-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -410,7 +388,9 @@
                             <col style="width: 200px" />
                             <col style="width: 200px" />
                           </colgroup>
-                          <tbody id="map-section-25-06-25"></tbody>
+                          <tbody id="map-section-25-06-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -488,7 +468,9 @@
                             <col style="width: 100px" />
                             <col style="width: 180px" />
                           </colgroup>
-                          <tbody id="medal-section-14-05-25"></tbody>
+                          <tbody id="medal-section-14-05-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
                         </table>
                         <br />
                       </span>
@@ -503,20 +485,26 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <span lang="EN-US" style="font-size: 11pt">
                       <span style="line-height: 107%">
-                        <ul>
-                          <h5>Weapon: Abyss Repulsor</h5>
-                          <img class="border-epic" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/leapstrikegunex.png" style="width: 240px" />
-                          <li>
-                            Deskripsi: Senjata berteknologi tinggi yang dimodifikasi dari Kronos yang menggunakan teknologi anti-gravitasi. Menembakkan peluru anti-gravitasi untuk menimbulkan damage area dan membuat pulse disekeliling
-                            player untuk berlindung. Kamu juga dapat charge otomatis energi anti gravitasi untuk leap dan hover di udara, dan menimbulkan damage secara langsung.
-                          </li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 400px" />
+                          </colgroup>
+                          <tbody id="weapon-section-16-04-25">
+                            <!-- Weapons will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Medal: [Repulsor]</h5>
-                          <img src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250767" />
-                          <li>Deskripsi: Medal yang diberikan setelah memiliki Gravity Repulsor dan Abyss Repulsor.</li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 250px" />
+                            <col style="width: 100px" />
+                            <col style="width: 180px" />
+                          </colgroup>
+                          <tbody id="medal-section-16-04-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
                       </span>
                     </span>
@@ -530,20 +518,25 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <span lang="EN-US" style="font-size: 11pt">
                       <span style="line-height: 107%">
-                        <ul>
-                          <h5>Weapon: Ascalon</h5>
-                          <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/sfboomerang.png" style="width: 240px" />
-                          <li>
-                            Deskripsi: Sebuah senjata jarak dekat yang dibuat oleh teknologi dari Aegis Research Institute. Menyerang dengan memutar senjata berbentuk boomerang. Saat gauge terisi, senjata akan menembakkan proyektil
-                            berbentuk boomerang, yang dapat ditangkap dan dilempar lagi. Saat sejumlah serangan tercapai, proyektil akan meledak tanpa kembali.
-                          </li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 400px" />
+                          </colgroup>
+                          <tbody id="weapon-section-16-03-25">
+                            <!-- Weapons will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Map: Bunker</h5>
-                          <img class="map-resize-small" src="https://clan.fastly.steamstatic.com/images//6770740/9b31541f7b725b6bd77f4f33b0561a4b9a7c4bbd.png" />
-                          <li>Lokasi: New Trench/Bunker zombie map concept.</li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                          </colgroup>
+                          <tbody id="map-section-16-03-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
                       </span>
                     </span>
@@ -557,38 +550,36 @@
                   <p style="text-align: justify; margin-bottom: 11px">
                     <span lang="EN-US" style="font-size: 11pt">
                       <span style="line-height: 107%">
-                        <ul>
-                          <h5>Class: Champion Isabelle</h5>
-                          <img class="border-transcendence" src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250250" />
-                          <li>
-                            Deskripsi: Setelah dilatih dalam pertempuran berulang kali melawan teroris, Isabelle sekarang lebih tampak seperti seorang petarung daripada seorang petinju. Ia adalah mantan petinju yang terluka dalam serangan
-                            bom saat bertanding dan harus meninggalkan kariernya. Ia bergabung dengan pasukan Counter-Terrorrist karena keinginannya untuk membalas dendam. Spesialis dalam infiltrasi dan pembunuhan dengan kemampuan atletik
-                            yang sangat baik.
-                          </li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 400px" />
+                          </colgroup>
+                          <tbody id="classchar-section-19-02-25">
+                            <!-- Class will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Class: Headliner LingLing</h5>
-                          <img class="border-transcendence" src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250251" />
-                          <li>
-                            Deskripsi: Lingling yang kembali, kali ini hadir dengan strategi misterius dan tidak mengungkap informasi apa pun. Kali ini, ia kembali memberikan kejutan baru bagi para penggemarnya dengan konsep yang
-                            benar-benar berbeda dari sebelumnya. Faktanya, identitas asli Lingling adalah seorang agen rahasia dengan keterampilan pengumpulan informasi yang sangat baik, dan dia hanya beroperasi dengan nomor agen dalam
-                            organisasi tersebut. Hanya sedikit orang yang mengetahui fakta ini.
-                          </li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                          </colgroup>
+                          <tbody id="map-section-19-02-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
-                        <ul>
-                          <h5>Medal: [Girl Crush]</h5>
-                          <img src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250256" />
-                          <li>Deskripsi: Medal yang didapatkan setelah memperoleh Headliner LingLing, Champion Isabelle, Cat Broadcast Camera, dan Punching Bag.</li>
-                        </ul>
-                        <br />
-                        <ul>
-                          <h5>Map: The Hidden Truth | Zombie Scenario Season 9 Chapter 3</h5>
-                          <img class="map-resize-small-rotate" src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250245" />
-                          <img class="map-resize-small-rotate" src="//file.nexon.com/NxFile/Notice/Download/ImagePreviewer.aspx?oidFile=6940049224801250246" />
-                          <li>Deskripsi: Dr. Soi menerima informasi lokasi Mammon yang melarikan diri dan segera meminta Gerard dan kelompoknya untuk melacak dan membunuh Mammon. Gerard akan terlibat dalam operasi tersebut.</li>
-                        </ul>
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 250px" />
+                            <col style="width: 100px" />
+                            <col style="width: 180px" />
+                          </colgroup>
+                          <tbody id="medal-section-19-02-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
+                        </table>
                         <br />
                       </span>
                     </span>
@@ -603,61 +594,16 @@
                     <p style="text-align: justify; margin-bottom: 11px">
                       <span lang="EN-US" style="font-size: 11pt">
                         <span style="line-height: 107%">
-                          <ul>
-                            <h5>Frost Viper</h5>
-                            <img class="border-epic" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/frostbite.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: Senjata yang dibuat dengan teknologi tak diketahui yang mengendalikan kekuatan ular es. Memberikan damage area pada musuh menggunakan serangan normal. Saat menyerang musuh, Frost Spike akan aktif dan
-                              memberikan damage tambahan. Dapat menggunakan Frost Orb yang menembakkan proyektil dengan peluru khusus yang diperoleh dari waktu ke waktu. Frost Ray dapat memberikan damage yang tinggi pada musuh di-depannya,
-                              dan Frost Shield yang melindungi area sekitarmu dan dapat diaktifkan bersamaan. Frost Armor secara otomatis digunakan untuk menangkis serangan zombie.
-                            </li>
-                          </ul>
+                          <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                            <colgroup>
+                              <col style="width: 240px" />
+                              <col style="width: 400px" />
+                            </colgroup>
+                            <tbody id="weapon-section-15-01-25">
+                              <!-- Weapons will be dynamically inserted here -->
+                            </tbody>
+                          </table>
                           <br />
-                          <ul>
-                            <h5>Fire Fox</h5>
-                            <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/bisonfox.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: Submachine gun yang dirasuki oleh roh rubah yang dapat mengelabuhi musuh. Pada mode zombie, fungsi tembakan assist diaktifkan pada musuh dalam jarak tertentu. Pada mode zombie dan scenario, secara
-                              otomatis membakar musuh disekitarnya.
-                            </li>
-                          </ul>
-                          <br />
-                          <ul>
-                            <h5>Star Forge</h5>
-                            <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/forgesword.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: Sebuah pedang dan palu yang dibuat oleh pandai besi mitologi dari bintang-bintang yang dilebur. Jika menempa pedangnya dengan palu khusus, akan menguatkan pedangnya dengan peluang tertentu. Apabila
-                              berhasil, Starlight Stab dilancarkan dengan energi bintang-bintang yang kuat. Ketika level enhancement melampaui batas, serangan Starlight Wave, yang secara langsung menembakkan kekuatan bintang saat menyerang
-                              akan dilancarkan. Serangan apapun yang dicoba setelah penempaan berhasil merupakan serangan khusus satu kali yang dapat diperkuat dengan penempaan setelah digunakan.
-                            </li>
-                          </ul>
-                          <br />
-                          <ul>
-                            <h5>M4A1 Tyrant</h5>
-                            <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/buffm4tw.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: M4A1 Tyrant merupakan sebuah Assault Rifle Special, yang memiliki 50 peluru khusus berkaliber .50 BMG Evil Flares, Dilihat dari semua aspek senjata ini amat sangat kuat, Memiliki 2 buah mode
-                              tembakan, yang mana dapat menembus pertahanan dan object dengan mudah, Sangat mematikan untuk zombie maupun human.
-                            </li>
-                          </ul>
-                          <br />
-                          <ul>
-                            <h5>AK47 Overlord</h5>
-                            <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/buffaktw.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: AK-47 Overlord merupakan sebuah Assault Rifle Special, yang memiliki 50 peluru khusus berkaliber .50 BMG Light Bomb, Dilihat dari semua aspek senjata ini amat sangat kuat, Memiliki 2 buah mode
-                              tembakan, yang mana dapat memberikan damage yang sangat besar, Sangat mematikan untuk zombie maupun human.
-                            </li>
-                          </ul>
-                          <br />
-                          <ul>
-                            <h5>Bloodlord WarHammer</h5>
-                            <img class="border-transcendence" src="https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/stormgianttw.png" style="width: 240px" />
-                            <li>
-                              Deskripsi: Bloodlord WarHammer merupakan senjata Melee, Senjata ini merupakan sebuah legenda, dengan memegang Senjata ini kalian dapat merasakan kekuatan suku zaman dahulu yang berpindah kepadamu. memiliki
-                              kemampuan untuk melakukan serangan cepat dan serangan kombinasi.
-                            </li>
-                          </ul>
                         </span>
                       </span>
                     </p>
@@ -691,6 +637,7 @@
   </body>
   <script>
     let mybutton = document.getElementById("scrollToTop");
+    let themeButton = document.getElementById("changetheme-floating");
     window.onscroll = function () {
       scrollFunction();
     };
@@ -698,8 +645,10 @@
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
+        if (themeButton) themeButton.style.display = "block";
       } else {
         mybutton.style.display = "none";
+        if (themeButton) themeButton.style.display = "none";
       }
     }
     function topFunction() {
