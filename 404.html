@@ -1,141 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="inface-web-auth" content="forum.nexon.com" />
-    <meta name="inface-gid" content="2507" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.ibb.co/MqGKypR/og-images.jpg" />
-    <meta name="description" content="Counter-Strike Nexon Indonesia Community (CSNIC) is a community for Counter-Strike Nexon players in Indonesia. Join us for the latest news, updates, and events!" />
-    <meta name="author" content="ZxAnugrah" />
-    <title>404 - Page not found!</title>
-    <link rel="stylesheet" href="./res/css/bootstrap.min.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Not Found - CSN Indonesia Community</title>
+
+    <!-- Reuse only the essential styles -->
     <link rel="icon" href="./res/img/csn-logo.png" />
+    <link rel="stylesheet" href="./res/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./res/css/style.css" />
     <link rel="stylesheet" href="./res/css/layout.css" />
-    <script src="./res/js/script.js"></script>
-    <style data-styled="active" data-styled-version="5.3.11"></style>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .error-container {
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        padding: 40px 60px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+
+      .error-container h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #ff5555;
+      }
+
+      .error-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+      }
+
+      .error-container p {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .home-button {
+        margin-top: 25px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.2s ease-in-out;
+      }
+
+      .home-button:hover {
+        background: #0056b3;
+      }
+
+      /* Dark mode compatibility */
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #121212;
+          color: #eee;
+        }
+        .error-container {
+          background: rgba(20, 20, 20, 0.9);
+          border: 1px solid #444;
+        }
+        .error-container p {
+          color: #bbb;
+        }
+        .home-button {
+          background: #0d6efd;
+        }
+        .home-button:hover {
+          background: #1a73e8;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div id="wrap" class="board-view authority-admin">
-      <!-- header -->
-      <div id="header">
-        <div class="game-title key-color-bg" id="header-2">
-          <a href="https://forum.nexon.com/csnexon/main" title="Counter-Strike Nexon Official Forum" class="logo-csn">
-            <img src="./res/img/logo_2x.png" class="logo-csn-small" />
-          </a>
-          <button class="btn-darkmode" onclick="dark_mode_theme(); dark_mode_text()" id="changetheme">
-            <img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />
-          </button>
-        </div>
-        <!-- <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu">&#9776;</button> -->
-        <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu"><span id="sidebarToggleIcon">&#9776;</span></button>
-      </div>
-
-      <!-- //header -->
-      <div id="container">
-        <div id="gnb">
-          <div class="inner">
-            <ul class="menu">
-              <li data-board-id="5374" data-board-type="LINK">
-                <a href="https://csnic-information.netlify.app/">
-                  <div class="icon-box">
-                    <i class="icon-img"><img src="./res/img/icon/ico-maintenance.png" alt="" /></i>
-                    <span class="tit">Go Back</span>
-                  </div>
-                </a>
-              </li>
-            </ul>
-            <hr style="margin: 15px 15px" />
-          </div>
-        </div>
-        <div class="sidebar-overlay" id="sidebarOverlay"></div>
-        <!-- //gnb -->
-
-        <!-- contents -->
-        <div id="contents">
-          <div class="box section-top">
-            <div class="title-box">
-              <h3>404 | Page not found!</h3>
-            </div>
-            <div class="reply-box">
-              <div class="filter-box"></div>
-            </div>
-          </div>
-        </div>
-        <div class="banner-box"></div>
-      </div>
-    </div>
-
-    <div id="popupModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <iframe id="popupIframe" src="" class="iframe-content" frameborder="0" allowfullscreen></iframe>
-      </div>
+    <div class="error-container">
+      <h1>404</h1>
+      <h2>Halaman Tidak Ditemukan</h2>
+      <p>Halaman yang anda akses tidak tersedia.</p>
+      <button class="home-button" onclick="window.location.href='/'">&larr; Kembali</button>
     </div>
   </body>
-  <script>
-    let mybutton = document.getElementById("scrollToTop");
-    let themeButton = document.getElementById("changetheme-floating");
-    window.onscroll = function () {
-      scrollFunction();
-    };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-        if (themeButton) themeButton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-        if (themeButton) themeButton.style.display = "none";
-      }
-    }
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-  <script>
-    const sidebarToggle = document.getElementById("sidebarToggle");
-    const sidebarToggleIcon = document.getElementById("sidebarToggleIcon");
-    const gnb = document.getElementById("gnb");
-    const sidebarOverlay = document.getElementById("sidebarOverlay");
-
-    sidebarToggle.onclick = function () {
-      const isOpen = gnb.classList.contains("open");
-      if (isOpen) {
-        gnb.classList.remove("open");
-        document.body.classList.remove("sidebar-open");
-        sidebarOverlay.classList.remove("active");
-        sidebarToggleIcon.innerHTML = "&#9776;"; // Hamburger
-      } else {
-        gnb.classList.add("open");
-        document.body.classList.add("sidebar-open");
-        sidebarOverlay.classList.add("active");
-        sidebarToggleIcon.innerHTML = "&times;"; // Cross
-      }
-    };
-
-    function closeSidebar() {
-      gnb.classList.remove("open");
-      document.body.classList.remove("sidebar-open");
-      sidebarOverlay.classList.remove("active");
-      sidebarToggleIcon.innerHTML = "&#9776;";
-    }
-    document.querySelectorAll("#gnb .menu a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (window.innerWidth <= 900) closeSidebar();
-      });
-    });
-
-    function setSidebarToggleVisible(visible) {
-      const sidebarToggle = document.getElementById("sidebarToggle");
-      if (sidebarToggle) {
-        sidebarToggle.style.display = visible ? "flex" : "none";
-      }
-    }
-  </script>
 </html>
