@@ -1,11 +1,11 @@
 async function loadAllclasschars() {
-  // Select all classchar sections (e.g. classchar-section-03-09-25)
+  // Select all classchar sections (e.g. classchar-section-MM-DD-YY)
   const classcharSections = document.querySelectorAll('[id^="classchar-section-"]');
   if (!classcharSections.length) return;
 
   for (const section of classcharSections) {
-    const sectionId = section.id; // classchar-section-03-09-25
-    const datePart = sectionId.replace("classchar-section-", ""); // 03-09-25
+    const sectionId = section.id; // classchar-section-MM-DD-YY
+    const datePart = sectionId.replace("classchar-section-", ""); // MM-DD-YY
     const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
 
     // Optional loading placeholder

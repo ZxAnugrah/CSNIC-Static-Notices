@@ -1,11 +1,11 @@
 async function loadAllMedals() {
-  // Select all medal sections (e.g. medal-section-03-09-25)
+  // Select all medal sections (e.g. medal-section-MM-DD-YY)
   const medalSections = document.querySelectorAll('[id^="medal-section-"]');
   if (!medalSections.length) return;
 
   for (const section of medalSections) {
-    const sectionId = section.id; // medal-section-03-09-25
-    const datePart = sectionId.replace("medal-section-", ""); // 03-09-25
+    const sectionId = section.id; // medal-section-MM-DD-YY
+    const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
     const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/medal.json`;
 
     // Optional loading placeholder

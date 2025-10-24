@@ -1,11 +1,11 @@
 async function loadAllmaps() {
-  // Select all map sections (e.g. map-section-03-09-25)
+  // Select all map sections (e.g. map-section-MM-DD-YY)
   const mapSections = document.querySelectorAll('[id^="map-section-"]');
   if (!mapSections.length) return;
 
   for (const section of mapSections) {
-    const sectionId = section.id; // map-section-03-09-25
-    const datePart = sectionId.replace("map-section-", ""); // 03-09-25
+    const sectionId = section.id; // map-section-MM-DD-YY
+    const datePart = sectionId.replace("map-section-", ""); // MM-DD-YY
     const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/map.json`;
 
     // Optional loading placeholder

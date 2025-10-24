@@ -1,11 +1,11 @@
 async function loadAllweapons() {
-  // Select all weapon sections (e.g. weapon-section-03-09-25)
+  // Select all weapon sections (e.g. weapon-section-MM-DD-YY)
   const weaponSections = document.querySelectorAll('[id^="weapon-section-"]');
   if (!weaponSections.length) return;
 
   for (const section of weaponSections) {
-    const sectionId = section.id; // weapon-section-03-09-25
-    const datePart = sectionId.replace("weapon-section-", ""); // 03-09-25
+    const sectionId = section.id; // weapon-section-MM-DD-YY
+    const datePart = sectionId.replace("weapon-section-", ""); // MM-DD-YY
     const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
 
     // Optional loading placeholder
