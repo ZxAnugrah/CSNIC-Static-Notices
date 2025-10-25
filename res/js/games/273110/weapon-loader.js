@@ -72,7 +72,7 @@ async function loadAllweapons() {
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${weapon.image}" style="width: 440px" />
+                <img src="${weapon.image}" style="height: 100px"  />
               </span><br />
               <span style="font-weight:bold">
                 ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}

@@ -1,0 +1,16 @@
+{
+  "0": {
+    "image": "https://static.wikia.nocookie.net/cso/images/f/f6/Twctclass_icon.png/",
+    "name": "Ian",
+    "section": "CT",
+    "grade": "Rare",
+    "description": "Ian adalah seorang mata - mata yang lulus dari sekolah kepolisian dan masuk ke organisasi kejahatan. Dia menjadi polisi untuk melakukan hal - hal baik. Namun ia tersiksa karena menjadi mata - mata dan menjalani hidup yang penuh kejahatan. Ian merupakan teman dekat dari Yuwei namun tetap menyembunyikan identitas aslinya sebagai polisi."
+  },
+  "1": {
+    "image": "https://static.wikia.nocookie.net/cso/images/e/e7/Twtrclass_icon.png/",
+    "name": "Yuwei",
+    "section": "TR",
+    "grade": "Rare",
+    "description": "Yuwei merupakan salah satu anggota organisasi kejahatan. Dia kejam dan berbahaya serta hidup bebas tanpa aturan. Namun dia dekat dengan Ian, dan Yuwei khawatir akan Ian yang kurang dapat beradaptasi dengan kehidupan organisasi kejahatan Sehingga ia memberikan banyak bantuan."
+  }
+}

@@ -73,7 +73,7 @@ async function loadAllclasschars() {
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${classchar.image}" style="width: 440px; margin-top: 8px" />
+                <img src="${classchar.image}" style="heigh: 100px; margin-top: 8px" />
                 <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -40px; padding: 10px; font-size: 15px">${classchar.section}</span>
               </span><br />
               <span style="font-weight:bold">${classchar.name}</span>
