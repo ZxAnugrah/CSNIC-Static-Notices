@@ -1,5 +1,5 @@
 const API_URL = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=273110&count=1&maxlength=500&format=json";
-const PROXY_URL = "https://cors-anywhere.herokuapp.com/"; // CORS proxy
+const PROXY_URL = "https://cors-anywhere.herokuapp.com/corsdemo"; // CORS proxy
 const STEAM_CLAN_IMAGE_URL = "https://clan.cloudflare.steamstatic.com/images/"; // Official Steam clan image CDN
 
 fetch(PROXY_URL + API_URL)
