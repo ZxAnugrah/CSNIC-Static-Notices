@@ -51,7 +51,7 @@ async function loadAllclasschars() {
 
       // Append classchars
       classchars.forEach((classchar) => {
-        const sectionColor = classchar.section === "CT" ? "#2489ccff" : classchar.section === "TR" ? "#d12a17ff" : "#95a5a6";
+        const sectionColor = classchar.section === "CT" ? "#2489ccff" : classchar.section === "TR" ? "#d12a17ff" : classchar.section === "ZB" ? "#790c00ff" : "#95a5a6";
         const gradeColor =
           classchar.grade === "Epic"
             ? "#ff1cc4"

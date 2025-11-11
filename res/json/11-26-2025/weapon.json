@@ -1,0 +1,78 @@
+{
+  "0": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade.png",
+    "name": "Thunder Flash I",
+    "grade": "Rare",
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil."
+  },
+  "1": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade.png",
+    "name": "Thunder Flash II",
+    "grade": "Unique",
+    "part": true,
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil, dengan performa yang ditingkatkan dari Thunder Flash I. Projektil secara otomatis mengenai musuh dalam jarak tertentu."
+  },
+  "2": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade.png",
+    "name": "Thunder Flash III",
+    "grade": "Unique",
+    "part": true,
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil, dengan performa yang ditingkatkan dari Thunder Flash II. Projektil secara otomatis mengenai musuh dalam jarak tertentu."
+  },
+  "3": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade.png",
+    "name": "Thunder Flash IV",
+    "grade": "Transcendence",
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil dan dilengkapi dengan fungsi penglihatan canggih, dengan performa yang ditingkatkan dari Thunder Flash III. Projektil secara otomatis mengenai musuh dalam jarak tertentu. Melontarkan granat khusus yang dapat menembus dinding, dan saat charge penuh, dapat melihat musuh dalam radius tertentu disekitar."
+  },
+  "4": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade.png",
+    "name": "Thunder Flash V",
+    "grade": "Transcendence",
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil dan dilengkapi dengan fungsi penglihatan canggih, dengan performa yang ditingkatkan dari Thunder Flash IV. Projektil secara otomatis mengenai musuh dalam jarak tertentu. Melontarkan granat khusus yang dapat menembus dinding, dan saat charge penuh, dapat melihat musuh dalam radius tertentu disekitar."
+  },
+  "5": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/huntgrenade6.png",
+    "name": "Thunder Flash VI",
+    "grade": "Legendary",
+    "description": "Sebuah granat spesial yang dapat melontarkan proyektil dan dilengkapi dengan fungsi penglihatan canggih, dengan performa yang ditingkatkan dari Thunder Flash V. Projektil secara otomatis mengenai musuh dalam jarak tertentu. Melontarkan granat khusus yang dapat menembus dinding, dan saat charge penuh, dapat melihat musuh dalam radius tertentu disekitar. "
+  },
+  "6": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/sgdrill.png",
+    "name": "Magnum Drill",
+    "zb3classic": true,
+    "grade": "Transcendence",
+    "description": "[ZHC] Magnum Drill merupakan sebuah senjata yang dibuat untuk menghancurkan lawan. memiliki 35 peluru shotgun berkaliber 4 gauge, Klik-Kanan akan memberikan tusukan drill yang sangat mematikan kepada lawan."
+  },
+  "7": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/stormgiant.png",
+    "name": "Storm Giant WarHammer",
+    "zb3classic": true,
+    "grade": "Transcendence",
+    "description": "[ZHC] Storm Giant WarHammer merupakan senjata Melee, Senjata ini merupakan sebuah legenda, dengan memegang Senjata ini kalian dapat merasakan kekuatan suku zaman dahulu yang berpindah kepadamu. memiliki kemampuan untuk melakukan serangan cepat dan serangan kombinasi."
+  },
+  "8": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/y25s4uts15.png",
+    "name": "UTS-15 Kraken",
+    "grade": "Unique",
+    "description": "Sebuah shotgun yang ditanamkan kekuatan monster kuno dari laut dalam. Saat mengisi peluru khusus, dapat menembakkan peluru pusaran yang memicu serangan Kraken pada musuh yang terkena."
+  },
+  "9": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/y25s4f2000.png",
+    "name": "F2000 Deep Legacy",
+    "grade": "Unique",
+    "description": "Memiliki 30 peluru, 5.56mm assault rifle dengan bullpup-design mengeluarkan kecepatan menembak yang mengagumkan dan memiliki akurasi yang stabil. Namun terlalu berat untuk pergerakan cepat."
+  },
+  "10": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/y25s4deserteagle.png",
+    "name": "Desert Eagle Deep Legacy",
+    "grade": "Basic",
+    "description": "Pistol .50AE hanya memiliki kapasitas 7 peluru, namun kekuatan penetrasi menutupi kekurangannya."
+  },
+  "11": {
+    "image": "https://sht-vod.dn.nexoncdn.co.kr/csonline/weapons/y25s4katana.png",
+    "name": "Katana Deep Legacy",
+    "grade": "Advanced",
+    "description": "Hanya satu-satunya pedang yang dapat terus menerus memotong dan digunakan untuk berperang pada jarak dekat melawan musuh yang sangat banyak, pedang yang ringan dan dapat menusuk terus menerus, ayunannya seperti tarian di dalam musim dingin, gerakan yang indah di depan musuh namun tanpa ampun menghancukan semuanya."
+  }
+}

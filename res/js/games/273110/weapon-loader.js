@@ -67,17 +67,22 @@ async function loadAllweapons() {
             : weapon.grade === "Basic"
             ? "#bbbbbbff"
             : "#000000ff";
+
+        const imageStyle = weapon.zb3classic
+          ? `height: 100px; background-image: url('https://static.wikia.nocookie.net/cso/images/0/0d/Zhc_best_item_bg.png'); background-size: contain; background-repeat: no-repeat; background-position: center;`
+          : `height: 100px;`;
+
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${weapon.image}" style="height: 100px"  />
+                <img src="${weapon.image}" style="${imageStyle}" />
               </span><br />
               <span style="font-weight:bold">
                 ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.enhance ? '<img src="./res/img/icon/weaponenhance.png" alt="WeaponEnhance" title="Enhancement" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
-                ${weapon.name}
+                ${weapon.zb3classic ? "<bold>[ZHC] </bold>" : ""} ${weapon.name}
               </span>
               <br />
               <span style="font-weight: bold; color: ${gradeColor};">[${weapon.grade}]</span>
