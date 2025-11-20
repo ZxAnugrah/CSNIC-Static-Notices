@@ -1,5 +1,5 @@
 const API_URL = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=273110&count=1&maxlength=500&format=json";
-const PROXY_URL = "https://cors-anywhere.herokuapp.com/corsdemo"; // CORS proxy
+const PROXY_URL = "https://cors-anywhere.herokuapp.com/"; // CORS proxy
 const STEAM_CLAN_IMAGE_URL = "https://clan.cloudflare.steamstatic.com/images/"; // Official Steam clan image CDN
 
 fetch(PROXY_URL + API_URL)
@@ -30,7 +30,7 @@ fetch(PROXY_URL + API_URL)
     console.error("Error:", error);
     document.getElementById("steam-news").innerHTML = `
       <p>Failed to load news. Try open this sites, and press the button. After that, refresh this pages.</p>
-      <a onclick="openModal('https://cors-anywhere.herokuapp.com/corsdemo')" href="javascript:void(0)">
+      <a onclick="openModal('https://cors-anywhere.herokuapp.com/corsdemo/')" href="javascript:void(0)">
         <div class="icon-box">
             <span class="tit">Open site</span>
         </div>
