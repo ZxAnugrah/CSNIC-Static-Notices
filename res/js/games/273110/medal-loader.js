@@ -6,7 +6,8 @@ async function loadAllMedals() {
   for (const section of medalSections) {
     const sectionId = section.id; // medal-section-MM-DD-YY
     const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
-    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/medal.json`;
+    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/medal.json`;
+    const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(/-25$/, "-2025")}/medal.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

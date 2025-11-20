@@ -6,7 +6,8 @@ async function loadAllweapons() {
   for (const section of weaponSections) {
     const sectionId = section.id; // weapon-section-MM-DD-YY
     const datePart = sectionId.replace("weapon-section-", ""); // MM-DD-YY
-    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

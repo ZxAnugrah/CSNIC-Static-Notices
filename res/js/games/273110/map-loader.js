@@ -6,7 +6,8 @@ async function loadAllmaps() {
   for (const section of mapSections) {
     const sectionId = section.id; // map-section-MM-DD-YY
     const datePart = sectionId.replace("map-section-", ""); // MM-DD-YY
-    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/map.json`;
+    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/map.json`;
+    const jsonPath = `https://zxanugrah.github.io/maps/${datePart.replace(/-25$/, "-2025")}/map.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

@@ -6,7 +6,8 @@ async function loadAllclasschars() {
   for (const section of classcharSections) {
     const sectionId = section.id; // classchar-section-MM-DD-YY
     const datePart = sectionId.replace("classchar-section-", ""); // MM-DD-YY
-    const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
+    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
+    const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
@@ -73,7 +74,7 @@ async function loadAllclasschars() {
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${classchar.image}" style="heigh: 100px; margin-top: 8px" />
+                <img src="${classchar.image}" style="margin-top: 8px" />
                 <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -40px; padding: 10px; font-size: 15px">${classchar.section}</span>
               </span><br />
               <span style="font-weight:bold">${classchar.name}</span>
