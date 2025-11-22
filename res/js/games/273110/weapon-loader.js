@@ -81,8 +81,8 @@ async function loadAllweapons() {
                 <img src="${weapon.image}" style="${imageStyle}" />
               </span><br />
               <span style="font-weight:bold">
-                ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.enhance ? '<img src="./res/img/icon/weaponenhance.png" alt="WeaponEnhance" title="Enhancement" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
+                ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.modification ? '<img src="./res/img/icon/weaponmodification.png" alt="WeaponModification" title="Weapon Modification" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.zb3classic ? "<bold>[ZHC] </bold>" : ""} ${weapon.name}
               </span>
