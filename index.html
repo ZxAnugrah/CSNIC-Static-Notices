@@ -15,6 +15,19 @@
     <link rel="icon" href="./res/img/csn-logo.png" />
     <link rel="stylesheet" href="./res/css/style.css" />
     <link rel="stylesheet" href="./res/css/layout.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N11PBLRD7J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-N11PBLRD7J");
+    </script>
+
     <script src="./res/js/script.js"></script>
     <script src="./res/js/games/273110/counterstrikenexon.js"></script>
     <script src="./res/js/games/273110/medal-loader.js"></script>
@@ -754,6 +767,11 @@
       </div>
     </div>
 
+    <!-- View Counter Display -->
+    <div class="view-counter">
+      <span>📊 Total Views: <span id="viewCount" class="counter-number">Loading...</span></span>
+    </div>
+
     <div id="popupModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -762,6 +780,24 @@
     </div>
   </body>
   <script>
+    // View Counter using CountAPI
+    async function updateViewCount() {
+      try {
+        // Using your actual domain as namespace
+        const response = await fetch("https://api.countapi.xyz/hit/csnic-information.netlify.app/views");
+        const data = await response.json();
+        document.getElementById("viewCount").textContent = data.value.toLocaleString();
+      } catch (error) {
+        console.log("Could not update view count");
+        document.getElementById("viewCount").textContent = "Many!";
+      }
+    }
+
+    // Initialize view counter when page loads
+    document.addEventListener("DOMContentLoaded", function () {
+      updateViewCount();
+    });
+
     let mybutton = document.getElementById("scrollToTop");
     let themeButton = document.getElementById("changetheme-floating");
     window.onscroll = function () {
