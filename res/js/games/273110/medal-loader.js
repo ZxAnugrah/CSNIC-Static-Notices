@@ -6,8 +6,8 @@ async function loadAllMedals() {
   for (const section of medalSections) {
     const sectionId = section.id; // medal-section-MM-DD-YY
     const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
-    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/medal.json`;
     const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(/-25$/, "-2025")}/medal.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(/-25$/, "-2025")}/medal.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
@@ -19,13 +19,32 @@ async function loadAllMedals() {
     `;
 
     try {
-      const response = await fetch(jsonPath);
-      if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
+      // Fetch both JSON files simultaneously
+      const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
 
-      const data = await response.json();
-      const medals = Object.keys(data)
-        .filter((key) => !isNaN(key))
-        .map((key) => data[key]);
+      let allMedals = [];
+
+      // Process global medals
+      if (response.status === "fulfilled" && response.value.ok) {
+        const data = await response.value.json();
+        const medals = Object.keys(data)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data[key], source: "global" }));
+        allMedals = [...allMedals, ...medals];
+      }
+
+      // Process China medals
+      if (response_chn.status === "fulfilled" && response_chn.value.ok) {
+        const data_chn = await response_chn.value.json();
+        const medals_chn = Object.keys(data_chn)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+        allMedals = [...allMedals, ...medals_chn];
+      }
+
+      if (allMedals.length === 0) {
+        throw new Error("No medal data found");
+      }
 
       // Insert header
       section.innerHTML = `
@@ -55,8 +74,11 @@ async function loadAllMedals() {
         </tr>
       `;
 
-      // Append medals
-      medals.forEach((medal) => {
+      // Append all medals (global + china)
+      allMedals.forEach((medal) => {
+        // Add China indicator if from China JSON
+        const chinaIndicator = medal.isChina ? "" : "";
+
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
@@ -82,7 +104,7 @@ async function loadAllMedals() {
         section.appendChild(row);
       });
     } catch (err) {
-      console.error(`Error loading ${jsonPath}:`, err);
+      console.error(`Error loading medals for ${datePart}:`, err);
       section.innerHTML = `
         <tr>
           <td colspan="3" style="text-align:center; padding: 15px; color:#e74c3c;">

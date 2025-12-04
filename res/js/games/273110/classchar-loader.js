@@ -6,8 +6,8 @@ async function loadAllclasschars() {
   for (const section of classcharSections) {
     const sectionId = section.id; // classchar-section-MM-DD-YY
     const datePart = sectionId.replace("classchar-section-", ""); // MM-DD-YY
-    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
     const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/classchars/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
@@ -19,13 +19,32 @@ async function loadAllclasschars() {
     `;
 
     try {
-      const response = await fetch(jsonPath);
-      if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
+      // Fetch both JSON files simultaneously
+      const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
 
-      const data = await response.json();
-      const classchars = Object.keys(data)
-        .filter((key) => !isNaN(key))
-        .map((key) => data[key]);
+      let allClasschars = [];
+
+      // Process global class characters
+      if (response.status === "fulfilled" && response.value.ok) {
+        const data = await response.value.json();
+        const classchars = Object.keys(data)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data[key], source: "global" }));
+        allClasschars = [...allClasschars, ...classchars];
+      }
+
+      // Process China class characters
+      if (response_chn.status === "fulfilled" && response_chn.value.ok) {
+        const data_chn = await response_chn.value.json();
+        const classchars_chn = Object.keys(data_chn)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+        allClasschars = [...allClasschars, ...classchars_chn];
+      }
+
+      if (allClasschars.length === 0) {
+        throw new Error("No class character data found");
+      }
 
       // Insert header
       section.innerHTML = `
@@ -50,8 +69,8 @@ async function loadAllclasschars() {
         </tr>
       `;
 
-      // Append classchars
-      classchars.forEach((classchar) => {
+      // Append all class characters (global + china)
+      allClasschars.forEach((classchar) => {
         const sectionColor = classchar.section === "CT" ? "#2489ccff" : classchar.section === "TR" ? "#d12a17ff" : classchar.section === "ZB" ? "#790c00ff" : "#95a5a6";
         const gradeColor =
           classchar.grade === "Epic"
@@ -91,11 +110,11 @@ async function loadAllclasschars() {
         section.appendChild(row);
       });
     } catch (err) {
-      console.error(`Error loading ${jsonPath}:`, err);
+      console.error(`Error loading class characters for ${datePart}:`, err);
       section.innerHTML = `
         <tr>
           <td colspan="3" style="text-align:center; padding: 15px; color:#e74c3c;">
-            ⚠️ Unable to load classchars for ${datePart}
+            ⚠️ Unable to load class characters for ${datePart}
           </td>
         </tr>
       `;

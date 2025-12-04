@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="inface-web-auth" content="forum.nexon.com" />
+    <meta name="inface-gid" content="2507" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.ibb.co/MqGKypR/og-images.jpg" />
+    <meta name="description" content="Counter-Strike Nexon Indonesia Community (CSNIC) is a community for Counter-Strike Nexon players in Indonesia. Join us for the latest news, updates, and events!" />
+    <meta name="author" content="ZxAnugrah" />
+    <title>Counter-Strike Nexon Indonesia Community - Information</title>
+    <link rel="stylesheet" href="./res/css/bootstrap.min.css" />
+    <link rel="icon" href="./res/img/csn-logo.png" />
+    <link rel="stylesheet" href="./res/css/style.css" />
+    <link rel="stylesheet" href="./res/css/layout.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N11PBLRD7J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-N11PBLRD7J");
+    </script>
+
+    <script src="./res/js/script.js"></script>
+    <script src="./res/js/games/273110/counterstrikenexon.js"></script>
+    <script src="./res/js/games/273110/medal-loader.js"></script>
+    <script src="./res/js/games/273110/weapon-loader.js"></script>
+    <script src="./res/js/games/273110/classchar-loader.js"></script>
+    <script src="./res/js/games/273110/map-loader.js"></script>
+    <style data-styled="active" data-styled-version="5.3.11"></style>
+  </head>
+
+  <body>
+    <div id="wrap" class="board-view authority-admin">
+      <!-- header -->
+      <div id="header">
+        <div class="game-title key-color-bg" id="header-2">
+          <a href="https://forum.nexon.com/csnexon/main" title="Counter-Strike Nexon Official Forum" class="logo-csn">
+            <img src="./res/img/logo_2x.png" class="logo-csn-small" />
+          </a>
+          <!-- <a class="btn-play" href="steam://rungameid/273110" title="Already installed? Play now!">Play</a> -->
+          <button class="btn-darkmode" onclick="dark_mode_theme()" id="changetheme">
+            <img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />
+          </button>
+        </div>
+        <!-- <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu">&#9776;</button> -->
+        <button id="sidebarToggle" class="sidebar-toggle" aria-label="Open menu"><span id="sidebarToggleIcon">&#9776;</span></button>
+      </div>
+
+      <!-- //header -->
+      <div id="container">
+        <div id="gnb">
+          <div class="inner">
+            <ul class="menu">
+              <li data-board-id="5501" data-board-type="LINK">
+                <a href="https://discord.gg/p9UM5hvr8k" target="_blank" title="Join to our Discord Server now!">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/icon/ico-discord.png" alt="" /></i>
+                    <span class="tit">CSNIC Server</span>
+                  </div>
+                </a>
+              </li>
+              <li data-board-id="5502" data-board-type="LINK">
+                <a href="https://www.facebook.com/groups/csnindonesiacommunity" target="_blank" title="Join to our Group Facebook now!">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/icon/ico-facebook.png" alt="" /></i>
+                    <span class="tit">CSNIC Group</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <hr style="margin: 15px 15px" />
+            <ul class="menu">
+              <li data-board-id="5601" data-board-type="LINK">
+                <a href="/" title="Check recent update of Counter-Strike Nexon!">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/icon/csn-icon.jpg" alt="" /></i>
+                    <span class="tit">Patch Note (CSN)</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+
+            <hr style="margin: 15px 15px" />
+            <ul class="menu">
+              <li data-board-id="6000" data-board-type="LINK" style="background-color: #1b7512">
+                <a onclick="openModal('/pages/maintenance.htm')" href="javascript:void(0)">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="./res/img/icon/ico-maintenance.png" alt="" /></i>
+                    <span class="tit" style="color: white">Regular Maintenance</span>
+                  </div>
+                </a>
+              </li>
+              <li data-board-id="6001" data-board-type="LINK" style="background-color: #8b0000">
+                <a onclick="openModal('/pages/temp-maintenance.htm')" href="javascript:void(0)">
+                  <div class="icon-box">
+                    <i class="icon-img"><img src="../res/img/icon/ico-temp-maintenance.png" alt="" /></i>
+                    <span class="tit" style="color: white">Temp. Maintenance</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <!-- //gnb -->
+
+        <!-- contents -->
+        <div id="contents">
+          <div class="bread-crumb">
+            <div class="inner">
+              <a href="/" class="color-gray">Patch Note (CSN)</a>
+              <span>&gt;</span>
+              <strong>
+                <a href="#" class="key-color">Announcement</a>
+              </strong>
+            </div>
+          </div>
+
+          <div class="box section-top">
+            <div class="title-box">
+              <h3>Announcement</h3>
+              <div class="profile-img">
+                <img src="./res/img/csnic-logo.png" style="background-color: black" />
+              </div>
+              <dl class="article-info">
+                <dd class="writer">Counter Strike Nexon Indonesia Community</dd>
+                <dd>
+                  <span class="date">Terakhir update: 3 Desember 2025</span>
+                </dd>
+              </dl>
+            </div>
+
+            <button class="btn-darkmode-floating" onclick="dark_mode_theme()" id="changetheme-floating" title="Change theme">
+              <img src="./res/img/icon/ico-theme.png" alt="change-theme" style="width: 20px" />
+            </button>
+            <button onclick="topFunction()" id="scrollToTop" title="Go to top">&uarr;</button>
+
+            <div class="view-box">
+              <div class="txt note-editor">
+                <div class="contents-box">
+                  <p style="text-align: justify; margin-bottom: 11px">
+                    <img src="./res/img/en-announcement.png" />
+                  </p>
+                  <hr class="bold" />
+
+                  <!-- 3 Desember 2025 -->
+                  <p style="text-align: justify; margin-bottom: 11px; margin-top: 15px" id="26-November">
+                    <span style="font-size: 14pt">Update Patch (3 Desember 2025)</span>
+                  </p>
+                  <p style="text-align: justify; margin-bottom: 11px">
+                    <span lang="EN-US" style="font-size: 11pt">
+                      <span style="line-height: 107%">
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 440px" />
+                          </colgroup>
+                          <tbody id="weapon-section-12-03-25">
+                            <!-- Weapons will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                        <br />
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                          </colgroup>
+                          <tbody id="map-section-12-03-25">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                        <br />
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 440px" />
+                          </colgroup>
+                          <tbody id="classchar-section-12-03-25">
+                            <!-- Class will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                        <br />
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 250px" />
+                            <col style="width: 100px" />
+                            <col style="width: 180px" />
+                          </colgroup>
+                          <tbody id="medal-section-12-03-25">
+                            <!-- Medals will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                        <br />
+                      </span>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reply-box">
+              <div class="filter-box"></div>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box"></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="logo-nexon">
+        <img src="./res/img/footer-logo.png" alt="" />
+        <span>2025 © NEXON Korea Corp. All Right Reserved.</span>
+        <span>Site created by: Admin Anugrah</span>
+      </div>
+    </div>
+
+    <div id="popupModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <iframe id="popupIframe" src="" class="iframe-content" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </body>
+  <script>
+    let mybutton = document.getElementById("scrollToTop");
+    let themeButton = document.getElementById("changetheme-floating");
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        if (themeButton) themeButton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+        if (themeButton) themeButton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <script>
+    const sidebarToggle = document.getElementById("sidebarToggle");
+    const sidebarToggleIcon = document.getElementById("sidebarToggleIcon");
+    const gnb = document.getElementById("gnb");
+    const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+    sidebarToggle.onclick = function () {
+      const isOpen = gnb.classList.contains("open");
+      if (isOpen) {
+        gnb.classList.remove("open");
+        document.body.classList.remove("sidebar-open");
+        sidebarOverlay.classList.remove("active");
+        sidebarToggleIcon.innerHTML = "&#9776;"; // Hamburger
+      } else {
+        gnb.classList.add("open");
+        document.body.classList.add("sidebar-open");
+        sidebarOverlay.classList.add("active");
+        sidebarToggleIcon.innerHTML = "&times;"; // Cross
+      }
+    };
+
+    function closeSidebar() {
+      gnb.classList.remove("open");
+      document.body.classList.remove("sidebar-open");
+      sidebarOverlay.classList.remove("active");
+      sidebarToggleIcon.innerHTML = "&#9776;";
+    }
+    document.querySelectorAll("#gnb .menu a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth <= 900) closeSidebar();
+      });
+    });
+
+    function setSidebarToggleVisible(visible) {
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      if (sidebarToggle) {
+        sidebarToggle.style.display = visible ? "flex" : "none";
+      }
+    }
+  </script>
+</html>

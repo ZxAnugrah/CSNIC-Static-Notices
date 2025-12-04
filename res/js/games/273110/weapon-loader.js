@@ -1,15 +1,15 @@
 async function loadAllweapons() {
-  // Select all weapon sections (e.g. weapon-section-MM-DD-YY)
   const weaponSections = document.querySelectorAll('[id^="weapon-section-"]');
   if (!weaponSections.length) return;
 
   for (const section of weaponSections) {
-    const sectionId = section.id; // weapon-section-MM-DD-YY
-    const datePart = sectionId.replace("weapon-section-", ""); // MM-DD-YY
-    // const jsonPath = `./res/json/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
-    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+    const sectionId = section.id;
+    const datePart = sectionId.replace("weapon-section-", "");
 
-    // Optional loading placeholder
+    // Two JSON paths
+    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+
     section.innerHTML = `
       <tr>
         <td colspan="2" style="text-align:center; padding:10px; font-style:italic; color:#999;">
@@ -19,13 +19,32 @@ async function loadAllweapons() {
     `;
 
     try {
-      const response = await fetch(jsonPath);
-      if (!response.ok) throw new Error(`Failed to fetch ${jsonPath}`);
+      // Fetch both JSON files simultaneously
+      const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
 
-      const data = await response.json();
-      const weapons = Object.keys(data)
-        .filter((key) => !isNaN(key))
-        .map((key) => data[key]);
+      let allWeapons = [];
+
+      // Process global weapons
+      if (response.status === "fulfilled" && response.value.ok) {
+        const data = await response.value.json();
+        const weapons = Object.keys(data)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data[key], source: "global" }));
+        allWeapons = [...allWeapons, ...weapons];
+      }
+
+      // Process China weapons
+      if (response_chn.status === "fulfilled" && response_chn.value.ok) {
+        const data_chn = await response_chn.value.json();
+        const weapons_chn = Object.keys(data_chn)
+          .filter((key) => !isNaN(key))
+          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+        allWeapons = [...allWeapons, ...weapons_chn];
+      }
+
+      if (allWeapons.length === 0) {
+        throw new Error("No weapon data found");
+      }
 
       // Insert header
       section.innerHTML = `
@@ -50,8 +69,8 @@ async function loadAllweapons() {
         </tr>
       `;
 
-      // Append weapons
-      weapons.forEach((weapon) => {
+      // Append all weapons (global + china)
+      allWeapons.forEach((weapon) => {
         const gradeColor =
           weapon.grade === "Epic"
             ? "#ff1cc4"
@@ -99,7 +118,7 @@ async function loadAllweapons() {
         section.appendChild(row);
       });
     } catch (err) {
-      console.error(`Error loading ${jsonPath}:`, err);
+      console.error(`Error loading weapons for ${datePart}:`, err);
       section.innerHTML = `
         <tr>
           <td colspan="3" style="text-align:center; padding: 15px; color:#e74c3c;">
