@@ -78,7 +78,7 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(6000, "2025-12-10T15:30:00");
+  setupCountdown(6000, "2025-12-24T14:00:00");
   setupCountdown(6001, "2025-12-16T10:00:00");
 
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
