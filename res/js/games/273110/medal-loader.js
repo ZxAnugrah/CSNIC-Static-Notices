@@ -3,11 +3,14 @@ async function loadAllMedals() {
   const medalSections = document.querySelectorAll('[id^="medal-section-"]');
   if (!medalSections.length) return;
 
+  const currentYear = new Date().getFullYear();
+  const yearSuffix = currentYear.toString().slice(-2);
+
   for (const section of medalSections) {
     const sectionId = section.id; // medal-section-MM-DD-YY
     const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(/-25$/, "-2025")}/medal.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(/-25$/, "-2025")}/medal.json`;
+    const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/medal.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/medal.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

@@ -3,11 +3,14 @@ async function loadAllmaps() {
   const mapSections = document.querySelectorAll('[id^="map-section-"]');
   if (!mapSections.length) return;
 
+  const currentYear = new Date().getFullYear();
+  const yearSuffix = currentYear.toString().slice(-2);
+
   for (const section of mapSections) {
     const sectionId = section.id; // map-section-MM-DD-YY
     const datePart = sectionId.replace("map-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/maps/${datePart.replace(/-25$/, "-2025")}/map.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/maps/${datePart.replace(/-25$/, "-2025")}/map.json`;
+    const jsonPath = `https://zxanugrah.github.io/maps/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/map.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/maps/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/map.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

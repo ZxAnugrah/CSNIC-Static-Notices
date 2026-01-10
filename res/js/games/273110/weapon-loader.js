@@ -2,13 +2,16 @@ async function loadAllweapons() {
   const weaponSections = document.querySelectorAll('[id^="weapon-section-"]');
   if (!weaponSections.length) return;
 
+  const currentYear = new Date().getFullYear();
+  const yearSuffix = currentYear.toString().slice(-2);
+
   for (const section of weaponSections) {
     const sectionId = section.id;
     const datePart = sectionId.replace("weapon-section-", "");
 
     // Two JSON paths
-    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(/-25$/, "-2025")}/weapon.json`;
+    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/weapon.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/weapon.json`;
 
     section.innerHTML = `
       <tr>

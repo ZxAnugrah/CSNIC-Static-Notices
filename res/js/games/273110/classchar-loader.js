@@ -3,11 +3,14 @@ async function loadAllclasschars() {
   const classcharSections = document.querySelectorAll('[id^="classchar-section-"]');
   if (!classcharSections.length) return;
 
+  const currentYear = new Date().getFullYear();
+  const yearSuffix = currentYear.toString().slice(-2);
+
   for (const section of classcharSections) {
     const sectionId = section.id; // classchar-section-MM-DD-YY
     const datePart = sectionId.replace("classchar-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/classchars/${datePart.replace(/-25$/, "-2025")}/classchar.json`;
+    const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/classchar.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/classchars/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/classchar.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
