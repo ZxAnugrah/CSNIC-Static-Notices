@@ -99,7 +99,7 @@ async function loadAllclasschars() {
                 <img src="${classchar.image}" style="margin-top: 8px" />
                 <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -40px; padding: 10px; font-size: 15px">${classchar.section}</span>
               </span><br />
-              <span style="font-weight:bold">${classchar.name}</span>
+              <span style="font-weight:bold;font-size: 12px">${classchar.name}</span>
               <br />
               <span style="font-weight: bold; color: ${gradeColor}">[${classchar.grade}]</span>
             </p>

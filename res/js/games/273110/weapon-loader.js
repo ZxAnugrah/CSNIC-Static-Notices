@@ -32,7 +32,8 @@ async function loadAllweapons() {
         const data = await response.value.json();
         const weapons = Object.keys(data)
           .filter((key) => !isNaN(key))
-          .map((key) => ({ ...data[key], source: "global" }));
+          .map((key) => ({ ...data[key], source: "global" }))
+          .filter((weapon) => !weapon.hidden);
         allWeapons = [...allWeapons, ...weapons];
       }
 
@@ -41,7 +42,8 @@ async function loadAllweapons() {
         const data_chn = await response_chn.value.json();
         const weapons_chn = Object.keys(data_chn)
           .filter((key) => !isNaN(key))
-          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }))
+          .filter((weapon) => !weapon.hidden);
         allWeapons = [...allWeapons, ...weapons_chn];
       }
 
@@ -102,7 +104,7 @@ async function loadAllweapons() {
               <span class="text-box-content">
                 <img src="${weapon.image}" style="${imageStyle}" />
               </span><br />
-              <span style="font-weight:bold">
+              <span style="font-weight:bold; font-size: 12px">
                 ${weapon.enhance ? '<img src="./res/img/icon/weaponenhance.png" alt="WeaponEnhance" title="Enhancement" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="WeaponPart" title="Part" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}
                 ${weapon.modification ? '<img src="./res/img/icon/weaponmodification.png" alt="WeaponModification" title="Weapon Modification" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}

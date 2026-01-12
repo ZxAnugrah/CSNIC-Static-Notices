@@ -88,7 +88,7 @@ async function loadAllmaps() {
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content">${imageHTML}</span><br />
+              <span class="text-box-content" style="font-size: 12px">${imageHTML}</span><br />
               <span style="font-weight:bold">
                 ${map.name}
                 ${chinaIndicator}
