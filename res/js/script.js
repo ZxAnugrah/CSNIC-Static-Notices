@@ -81,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
   setupCountdown(6000, "2025-12-24T14:00:00");
   setupCountdown(6001, "2025-12-16T10:00:00");
 
+  setupCountdown(6002, "2026-01-31T23:59:59");
+
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.body.classList.add("dark-mode");
     const themeButton = document.getElementById("changetheme");
