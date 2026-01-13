@@ -9,8 +9,8 @@ async function loadAllMedals() {
   for (const section of medalSections) {
     const sectionId = section.id; // medal-section-MM-DD-YY
     const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/medal.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/medal.json`;
+    const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/medal.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/medal.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

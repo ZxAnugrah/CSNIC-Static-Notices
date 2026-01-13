@@ -9,8 +9,8 @@ async function loadAllmaps() {
   for (const section of mapSections) {
     const sectionId = section.id; // map-section-MM-DD-YY
     const datePart = sectionId.replace("map-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/maps/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/map.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/maps/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/map.json`;
+    const jsonPath = `https://zxanugrah.github.io/maps/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/map.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/maps/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/map.json`;
 
     // Optional loading placeholder
     section.innerHTML = `

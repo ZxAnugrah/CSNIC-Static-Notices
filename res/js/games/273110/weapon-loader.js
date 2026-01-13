@@ -10,8 +10,8 @@ async function loadAllweapons() {
     const datePart = sectionId.replace("weapon-section-", "");
 
     // Two JSON paths
-    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/weapon.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/weapon.json`;
+    const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/weapon.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/weapon.json`;
 
     section.innerHTML = `
       <tr>

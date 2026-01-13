@@ -9,8 +9,8 @@ async function loadAllclasschars() {
   for (const section of classcharSections) {
     const sectionId = section.id; // classchar-section-MM-DD-YY
     const datePart = sectionId.replace("classchar-section-", ""); // MM-DD-YY
-    const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/classchar.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/classchars/${datePart.replace(/-\d{2}$/, `-${currentYear}`)}/classchar.json`;
+    const jsonPath = `https://zxanugrah.github.io/classchars/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/classchar.json`;
+    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/classchars/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/classchar.json`;
 
     // Optional loading placeholder
     section.innerHTML = `
