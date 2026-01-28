@@ -78,7 +78,7 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(6000, "2026-01-14T14:30:00");
+  setupCountdown(6000, "2026-01-28T13:00:00");
   setupCountdown(6001, "2026-01-21T11:30:00");
 
   setupCountdown(6002, "2026-01-31T23:59:59");
