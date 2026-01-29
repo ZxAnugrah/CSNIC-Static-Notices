@@ -80,18 +80,18 @@ async function loadAllweapons() {
           weapon.grade === "Epic"
             ? "#ff1cc4"
             : weapon.grade === "Legendary"
-            ? "#590fe4ff"
-            : weapon.grade === "Transcendence"
-            ? "#cb8f0f"
-            : weapon.grade === "Unique"
-            ? "#e02c2cff"
-            : weapon.grade === "Rare"
-            ? "#0b62aa"
-            : weapon.grade === "Advanced"
-            ? "#0e7216"
-            : weapon.grade === "Basic"
-            ? "#bbbbbbff"
-            : "#000000ff";
+              ? "#590fe4ff"
+              : weapon.grade === "Transcendence"
+                ? "#cb8f0f"
+                : weapon.grade === "Unique"
+                  ? "#e02c2cff"
+                  : weapon.grade === "Rare"
+                    ? "#0b62aa"
+                    : weapon.grade === "Advanced"
+                      ? "#0e7216"
+                      : weapon.grade === "Basic"
+                        ? "#bbbbbbff"
+                        : "#000000ff";
 
         const imageStyle = weapon.zb3classic
           ? `height: 100px; background-image: url('https://static.wikia.nocookie.net/cso/images/0/0d/Zhc_best_item_bg.png'); background-size: contain; background-repeat: no-repeat; background-position: center;`
@@ -102,7 +102,7 @@ async function loadAllweapons() {
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${weapon.image}" style="${imageStyle}" />
+                <img src="${weapon.image}" style="${imageStyle}" title="${weapon.name}" />
               </span><br />
               <span style="font-weight:bold; font-size: 12px">
                 ${weapon.enhance ? '<img src="./res/img/icon/weaponenhance.png" alt="WeaponEnhance" title="Enhancement" style="width:16px; margin-top: -2px; vertical-align:middle;" />' : ""}

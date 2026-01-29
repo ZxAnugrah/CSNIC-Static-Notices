@@ -79,24 +79,24 @@ async function loadAllclasschars() {
           classchar.grade === "Epic"
             ? "#ff1cc4"
             : classchar.grade === "Legendary"
-            ? "#300580"
-            : classchar.grade === "Transcendence"
-            ? "#cb8f0f"
-            : classchar.grade === "Unique"
-            ? "#b92222ff"
-            : classchar.grade === "Rare"
-            ? "#0b62aa"
-            : classchar.grade === "Advanced"
-            ? "#0e7216"
-            : classchar.grade === "Basic"
-            ? "#bbbbbbff"
-            : "#000000ff";
+              ? "#300580"
+              : classchar.grade === "Transcendence"
+                ? "#cb8f0f"
+                : classchar.grade === "Unique"
+                  ? "#b92222ff"
+                  : classchar.grade === "Rare"
+                    ? "#0b62aa"
+                    : classchar.grade === "Advanced"
+                      ? "#0e7216"
+                      : classchar.grade === "Basic"
+                        ? "#bbbbbbff"
+                        : "#000000ff";
         const row = document.createElement("tr");
         row.innerHTML = `
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${classchar.image}" style="margin-top: 8px" />
+                <img src="${classchar.image}" style="margin-top: 8px" title="${classchar.name}" />
                 <span style="font-weight:bold; color: ${sectionColor}; position: absolute; margin-left: -40px; padding: 10px; font-size: 15px">${classchar.section}</span>
               </span><br />
               <span style="font-weight:bold;font-size: 12px">${classchar.name}</span>
