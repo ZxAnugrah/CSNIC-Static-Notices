@@ -97,7 +97,7 @@ async function loadAllMedals() {
           <td class="border-box-content">
             <p class="MsoNormal p-normal-tr-box">
               <span class="text-box-content">
-                <img src="${medal.image}" width="80px" style="padding: 2px" />
+                <img src="${medal.image}" width="80px" style="padding: 2px" title="${medal.name}"/>
                 <br />
                 <span style="font-size:11px;font-weight:bold">[${medal.name}]</span>
               </span>

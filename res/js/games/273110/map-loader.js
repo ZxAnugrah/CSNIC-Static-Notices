@@ -77,9 +77,9 @@ async function loadAllmaps() {
         // Add China indicator if from China JSON
         const chinaIndicator = map.isChina ? "" : "";
 
-        let imageHTML = `<img src="${map.image}" style="width: 220px" />`;
+        let imageHTML = `<img src="${map.image}" style="width: 220px" title="${map.name}"/>`;
         if (map.image2) {
-          imageHTML += `<br /><img src="${map.image2}" style="width: 220px; margin-top: 6px;" />`;
+          imageHTML += `<br /><img src="${map.image2}" style="width: 220px; margin-top: 6px;" title="${map.name}"/>`;
         }
 
         const textInfo = map.location ? map.location : map.description || "—";
