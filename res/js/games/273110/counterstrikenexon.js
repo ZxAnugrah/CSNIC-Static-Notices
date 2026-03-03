@@ -29,12 +29,15 @@ fetch(PROXY_URL + encodeURIComponent(NEXON_API_URL))
           // Replace bold tags
           .replace(/\[b\](.*?)\[\/b\]/g, "<strong>$1</strong>")
           // Replace headers
+          .replace(/\[h1\](.*?)\[\/h1\]/g, '<h4 style="color:#ff6b00;">$1</h5>')
           .replace(/\[h2\](.*?)\[\/h2\]/g, '<h5 style="color:#ff6b00;">$1</h5>')
           .replace(/\[h3\](.*?)\[\/h3\]/g, '<h6 style="color:#ffa500;">$1</h6>')
           // Replace lists
           .replace(/\[list\]/g, '<ul style="margin:5px 0; padding-left:20px;">')
           .replace(/\[\/list\]/g, "</ul>")
           .replace(/\[\*\]/g, "<li>")
+
+          .replace(/\[i\](.*?)\[\/i\]/g, "<i>$1</i>")
           // Replace color tags
           .replace(/\[color=#(.*?)\](.*?)\[\/color\]/g, '<span style="color:#$1;">$2</span>')
           // Replace URLs
