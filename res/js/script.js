@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setupCountdown(6001, "2026-01-21T11:30:00");
 
   setupCountdown(6002, "2026-01-31T23:59:59");
+  setupCountdown(9999, "1980-01-01T00:00:00");
 
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.body.classList.add("dark-mode");

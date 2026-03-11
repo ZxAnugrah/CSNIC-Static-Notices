@@ -139,6 +139,15 @@
                   </div>
                 </a>
               </li>
+              <!-- TEMPORARY CLEAR CACHE BUTTON (DELETE LATER) -->
+              <li data-board-id="9999" data-board-type="LINK" style="background-color: #ff4444; margin-top: 10px">
+                <a onclick="clearAllCache()" href="javascript:void(0)" style="cursor: pointer">
+                  <div class="icon-box">
+                    <i class="icon-img" style="font-style: normal">🗑️</i>
+                    <span class="tit" style="color: white">Clear Cache (Temp)</span>
+                  </div>
+                </a>
+              </li>
               <!-- <li data-board-id="9000">
                 <a href="https://youtube.com/@Ritsukazed" target="_blank">
                   <div class="icon-box">
@@ -198,6 +207,38 @@
                     <!-- News will be loaded here -->
                   </div>
                   <!-- <a href="https://store.steampowered.com/news/app/273110" target="_blank" style="text-decoration: none">View more news</a> -->
+                  <hr class="bold" />
+
+                  <!-- XX Maret 2026 -->
+                  <p style="text-align: justify; margin-bottom: 11px; margin-top: 15px" id="11-Februari">
+                    <span style="font-size: 14pt">Update Patch (18 Maret 2026)</span>
+                  </p>
+                  <p style="text-align: justify; margin-bottom: 11px">
+                    <span lang="EN-US" style="font-size: 11pt">
+                      <span style="line-height: 107%">
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 240px" />
+                            <col style="width: 440px" />
+                          </colgroup>
+                          <tbody id="weapon-section-2026-03-18">
+                            <!-- Weapons will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                        <br />
+                        <table class="MsoTableGrid table-title-grid" cellpadding="0" data-template-id="1">
+                          <colgroup>
+                            <col style="width: 200px" />
+                            <col style="width: 200px" />
+                          </colgroup>
+                          <tbody id="map-section-2026-03-18">
+                            <!-- Maps will be dynamically inserted here -->
+                          </tbody>
+                        </table>
+                      </span>
+                    </span>
+                  </p>
+
                   <hr class="bold" />
 
                   <!-- 11 Februari 2026 -->
@@ -555,6 +596,29 @@
       const sidebarToggle = document.getElementById("sidebarToggle");
       if (sidebarToggle) {
         sidebarToggle.style.display = visible ? "flex" : "none";
+      }
+    }
+  </script>
+  <script>
+    // TEMPORARY FUNCTION TO CLEAR ALL CACHES (DELETE LATER)
+    function clearAllCache() {
+      if (confirm("⚠️ Clear all caches?\n\nThis will:\n• Clear localStorage\n• Clear sessionStorage\n• Reload the page\n\nThis is TEMPORARY for development only!")) {
+        // Clear all storages
+        localStorage.clear();
+        sessionStorage.clear();
+
+        // Clear browser cache if possible (via meta tags - we'll add them temporarily)
+        if (performance && performance.clearResourceTimings) {
+          performance.clearResourceTimings();
+        }
+
+        // Show success message
+        alert("✅ Cache cleared! Page will reload in 1 second...");
+
+        // Force reload from server, not cache
+        setTimeout(() => {
+          window.location.reload(true);
+        }, 1000);
       }
     }
   </script>

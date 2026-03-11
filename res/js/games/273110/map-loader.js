@@ -32,7 +32,8 @@ async function loadAllmaps() {
         const data = await response.value.json();
         const maps = Object.keys(data)
           .filter((key) => !isNaN(key))
-          .map((key) => ({ ...data[key], source: "global" }));
+          .map((key) => ({ ...data[key], source: "global" }))
+          .filter((map) => !map.hidden);
         allMaps = [...allMaps, ...maps];
       }
 
@@ -41,7 +42,8 @@ async function loadAllmaps() {
         const data_chn = await response_chn.value.json();
         const maps_chn = Object.keys(data_chn)
           .filter((key) => !isNaN(key))
-          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }))
+          .filter((map) => !map.hidden);
         allMaps = [...allMaps, ...maps_chn];
       }
 
