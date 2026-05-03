@@ -159,7 +159,8 @@
   text-align: justify;
   vertical-align: text-bottom;
   margin: 0px auto;
-  width: 472.2px;
+  width: 100%; /* Changed from 472.2px */
+  max-width: 100%; /* Added */
   border-color: black;
   border-style: none;
   border-width: 1px;

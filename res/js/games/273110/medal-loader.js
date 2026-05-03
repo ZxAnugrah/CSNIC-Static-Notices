@@ -1,5 +1,34 @@
+// Add responsive styles once
+if (!document.getElementById("medal-responsive-styles")) {
+  const styleTag = document.createElement("style");
+  styleTag.id = "medal-responsive-styles";
+  styleTag.textContent = `
+    /* Desktop defaults */
+    .medal-desc { font-size: 11px; }
+    .medal-honor { font-size: 11px; }
+    .medal-img { width: 100px; padding: 2px; }
+    .medal-name { font-size: 11px; font-weight: bold; }
+    
+    /* Tablet */
+    @media (max-width: 900px) {
+      .medal-desc { font-size: 9px; }
+      .medal-honor { font-size: 9px; }
+      .medal-img { width: 60px; }
+      .medal-name { font-size: 9px; }
+    }
+    
+    /* Phone */
+    @media (max-width: 600px) {
+      .medal-desc { font-size: 8px; }
+      .medal-honor { font-size: 8px; }
+      .medal-img { width: 50px; }
+      .medal-name { font-size: 8px; }
+    }
+  `;
+  document.head.appendChild(styleTag);
+}
+
 async function loadAllMedals() {
-  // Select all medal sections (e.g. medal-section-MM-DD-YY)
   const medalSections = document.querySelectorAll('[id^="medal-section-"]');
   if (!medalSections.length) return;
 
@@ -7,12 +36,12 @@ async function loadAllMedals() {
   const yearSuffix = currentYear.toString().slice(-2);
 
   for (const section of medalSections) {
-    const sectionId = section.id; // medal-section-MM-DD-YY
-    const datePart = sectionId.replace("medal-section-", ""); // MM-DD-YY
+    const sectionId = section.id;
+    const datePart = sectionId.replace("medal-section-", "");
     const jsonPath = `https://zxanugrah.github.io/medals/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/medal.json`;
-    const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/medal.json`;
+    // const chnjsonPath = `https://zxanugrah.github.io/chn_patch/medals/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/medal.json`;
 
-    // Optional loading placeholder
+    // Loading placeholder
     section.innerHTML = `
       <tr>
         <td colspan="3" style="text-align:center; padding:10px; font-style:italic; color:#999;">
@@ -22,8 +51,8 @@ async function loadAllMedals() {
     `;
 
     try {
-      // Fetch both JSON files simultaneously
-      const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
+      // const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
+      const [response] = await Promise.allSettled([fetch(jsonPath)]);
 
       let allMedals = [];
 
@@ -37,19 +66,19 @@ async function loadAllMedals() {
       }
 
       // Process China medals
-      if (response_chn.status === "fulfilled" && response_chn.value.ok) {
-        const data_chn = await response_chn.value.json();
-        const medals_chn = Object.keys(data_chn)
-          .filter((key) => !isNaN(key))
-          .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
-        allMedals = [...allMedals, ...medals_chn];
-      }
+      // if (response_chn.status === "fulfilled" && response_chn.value.ok) {
+      //   const data_chn = await response_chn.value.json();
+      //   const medals_chn = Object.keys(data_chn)
+      //     .filter((key) => !isNaN(key))
+      //     .map((key) => ({ ...data_chn[key], source: "china", isChina: true }));
+      //   allMedals = [...allMedals, ...medals_chn];
+      // }
 
       if (allMedals.length === 0) {
         throw new Error("No medal data found");
       }
 
-      // Insert header
+      // Header
       section.innerHTML = `
         <tr>
           <td class="tr-box-title" colspan="3">
@@ -61,7 +90,7 @@ async function loadAllMedals() {
         <tr style="height: 21.9333px">
           <td class="tr-box-title">
             <p class="MsoNormal p-normal-tr-box">
-              <span class="span-text-title-box" >Deskripsi</span>
+              <span class="span-text-title-box">Deskripsi</span>
             </p>
           </td>
           <td class="tr-box-title">
@@ -77,33 +106,46 @@ async function loadAllMedals() {
         </tr>
       `;
 
-      // Append all medals (global + china)
+      // Build rows
       allMedals.forEach((medal) => {
-        // Add China indicator if from China JSON
         const chinaIndicator = medal.isChina ? "" : "";
 
         const row = document.createElement("tr");
-        row.innerHTML = `
-          <td class="border-box-content">
-            <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content" style="font-size:11px">${medal.description}</span>
-            </p>
-          </td>
-          <td class="border-box-content">
-            <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content" style="font-size:11px">${medal.honor}</span>
-            </p>
-          </td>
-          <td class="border-box-content">
-            <p class="MsoNormal p-normal-tr-box">
-              <span class="text-box-content">
-                <img src="${medal.image}" width="80px" style="padding: 2px" title="${medal.name}"/>
-                <br />
-                <span style="font-size:11px;font-weight:bold">[${medal.name}]</span>
-              </span>
-            </p>
-          </td>
+
+        // === DESCRIPTION CELL ===
+        const descCell = document.createElement("td");
+        descCell.className = "border-box-content";
+        descCell.innerHTML = `
+          <p class="MsoNormal p-normal-tr-box">
+            <span class="medal-desc text-box-content">${medal.description}</span>
+          </p>
         `;
+
+        // === HONOR POINT CELL ===
+        const honorCell = document.createElement("td");
+        honorCell.className = "border-box-content";
+        honorCell.innerHTML = `
+          <p class="MsoNormal p-normal-tr-box">
+            <span class="medal-honor text-box-content">${medal.honor}</span>
+          </p>
+        `;
+
+        // === PREVIEW CELL ===
+        const previewCell = document.createElement("td");
+        previewCell.className = "border-box-content";
+        previewCell.innerHTML = `
+          <p class="MsoNormal p-normal-tr-box">
+            <span class="text-box-content">
+              <img src="${medal.image}" class="medal-img" title="${medal.name}" />
+              <br />
+              <span class="medal-name">[${medal.name}]</span>
+            </span>
+          </p>
+        `;
+
+        row.appendChild(descCell);
+        row.appendChild(honorCell);
+        row.appendChild(previewCell);
         section.appendChild(row);
       });
     } catch (err) {
