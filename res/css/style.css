@@ -678,20 +678,54 @@ li h3 {
   #header {
     position: relative;
     width: 100%;
-    height: 120px;
+    height: auto;
+    min-height: 66px;
+  }
+  #header .game-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 66px;
+    padding: 11px 60px 0 60px;
+    box-sizing: border-box;
+  }
+  .logo-csn {
+    width: auto !important;
+    display: block;
+  }
+  .logo-csn-small {
+    width: 150px;
+    margin: 0;
+    display: block;
   }
   .sidebar-toggle {
     display: flex !important;
-    margin-top: 15px;
+    position: absolute;
+    top: 0px;
+    left: 8px;
+    z-index: 2000;
   }
-  .logo-csn-small {
-    margin-left: 60px;
-  }
+
   .btn-play {
     display: none;
   }
   .btn-darkmode {
-    margin: 25px 30px 10px 10px;
+    float: none !important;
+    display: flex !important;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    margin: 0 !important;
+    z-index: 1;
+  }
+  .btn-lightmode {
+    float: none !important;
+    display: flex !important;
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    margin: 0 !important;
+    z-index: 1;
   }
 
   /* ============ SIDEBAR (GNB) ============ */
@@ -732,6 +766,7 @@ li h3 {
   }
   .sidebar-overlay.active {
     display: block;
+    background: rgba(71, 71, 71, 0.288) !important;
   }
 
   /* ============ CONTAINER & LAYOUT ============ */
@@ -8180,10 +8215,9 @@ li[data-board-id][style*="display: none"] {
 }
 
 .sidebar-toggle {
-  display: none !important;
-  position: inherit;
-  top: -94px;
-  left: 6px;
+  display: none;
+  top: 30px;
+  left: 10px;
   z-index: 2000;
   color: grey;
   border: none;
@@ -8194,7 +8228,6 @@ li[data-board-id][style*="display: none"] {
   outline: none;
   width: 54px;
   height: 54px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -8262,7 +8295,7 @@ li[data-board-id][style*="display: none"] {
   }
   /* Optional: dark overlay when sidebar is open */
   .sidebar-overlay {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
