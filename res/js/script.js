@@ -82,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setupCountdown(6000, "2026-05-13T14:00:00"); // maintenance.htm
   setupCountdown(6001, "2026-05-13T15:30:00"); // temp-maintenance.htm
-  setupCountdown(6001, "2026-01-21T11:30:00");
 
   setupCountdown(6002, "2026-01-31T23:59:59");
   setupCountdown(9999, "1980-01-01T00:00:00");

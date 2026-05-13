@@ -8215,7 +8215,7 @@ li[data-board-id][style*="display: none"] {
 }
 
 .sidebar-toggle {
-  display: none;
+  display: none !important;
   top: 30px;
   left: 10px;
   z-index: 2000;
@@ -8265,7 +8265,6 @@ li[data-board-id][style*="display: none"] {
     outline: none;
     width: 54px;
     height: 54px;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
