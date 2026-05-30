@@ -10,6 +10,7 @@ if (!document.getElementById("weapon-responsive-styles")) {
     .weapon-name { font-weight: bold; font-size: 12px; }
     .weapon-grade { font-weight: bold; }
     .weapon-desc { font-size: 11px; }
+    .weapon-adjustment { font-size: 11px; }
     .weapon-icon { width: 16px; height: 16px; vertical-align: middle; flex-shrink: 0; }
     
     /* Tablet */
@@ -20,6 +21,7 @@ if (!document.getElementById("weapon-responsive-styles")) {
       .weapon-name { font-size: 10px; }
       .weapon-grade { font-size: 10px; }
       .weapon-desc { font-size: 9px; }
+      .weapon-adjustment { font-size: 9px; }
       .weapon-icon { width: 14px; height: 14px; }
     }
     
@@ -31,6 +33,7 @@ if (!document.getElementById("weapon-responsive-styles")) {
       .weapon-name { font-size: 9px; }
       .weapon-grade { font-size: 9px; }
       .weapon-desc { font-size: 8px; }
+      .weapon-adjustment { font-size: 8px; }
       .weapon-icon { width: 12px; height: 12px; }
     }
   `;
@@ -49,7 +52,6 @@ async function loadAllweapons() {
     const datePart = sectionId.replace("weapon-section-", "");
 
     const jsonPath = `https://zxanugrah.github.io/weapons/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/weapon.json`;
-    // const chnjsonPath = `https://zxanugrah.github.io/chn_patch/weapons/${datePart.replace(`-${currentYear}-`, /-\d{2}$/)}/weapon.json`;
 
     // Loading placeholder
     section.innerHTML = `
@@ -61,12 +63,10 @@ async function loadAllweapons() {
     `;
 
     try {
-      //const [response, response_chn] = await Promise.allSettled([fetch(jsonPath), fetch(chnjsonPath)]);
       const [response] = await Promise.allSettled([fetch(jsonPath)]);
 
       let allWeapons = [];
 
-      // Process global weapons
       if (response.status === "fulfilled" && response.value.ok) {
         const data = await response.value.json();
         const weapons = Object.keys(data)
@@ -76,24 +76,17 @@ async function loadAllweapons() {
         allWeapons = [...allWeapons, ...weapons];
       }
 
-      // Process China weapons
-      // if (response_chn.status === "fulfilled" && response_chn.value.ok) {
-      //   const data_chn = await response_chn.value.json();
-      //   const weapons_chn = Object.keys(data_chn)
-      //     .filter((key) => !isNaN(key))
-      //     .map((key) => ({ ...data_chn[key], source: "china", isChina: true }))
-      //     .filter((weapon) => !weapon.hidden);
-      //   allWeapons = [...allWeapons, ...weapons_chn];
-      // }
-
       if (allWeapons.length === 0) {
         throw new Error("No weapon data found");
       }
 
-      // Header
+      // Check if ANY weapon has adjustment data
+      const hasAnyAdjustment = allWeapons.some((w) => w.adjustment);
+
+      // Header - dynamic colspan based on whether there are adjustments
       section.innerHTML = `
         <tr>
-          <td class="tr-box-title" colspan="2">
+          <td class="tr-box-title" colspan="${hasAnyAdjustment ? "3" : "2"}">
             <p class="MsoNormal p-normal-tr-box">
               <span class="span-text-title-box">Weapon</span>
             </p>
@@ -110,6 +103,17 @@ async function loadAllweapons() {
               <span class="span-text-title-box">Deskripsi</span>
             </p>
           </td>
+          ${
+            hasAnyAdjustment
+              ? `
+          <td class="tr-box-title">
+            <p class="MsoNormal p-normal-tr-box">
+              <span class="span-text-title-box">Lainnya</span>
+            </p>
+          </td>
+          `
+              : ""
+          }
         </tr>
       `;
 
@@ -136,7 +140,6 @@ async function loadAllweapons() {
           ? `height: 100px; background-image: url('https://static.wikia.nocookie.net/cso/images/0/0d/Zhc_best_item_bg.png'); background-size: contain; background-repeat: no-repeat; background-position: center;`
           : "";
 
-        // Synthesis tooltip
         const synthesisTooltip =
           weapon.synthesis === true && weapon.synthesis_desc
             ? `<span title="${weapon.synthesis_desc}" style="cursor:help;">
@@ -144,11 +147,9 @@ async function loadAllweapons() {
               </span>`
             : "";
 
-        // Badge icons
         const enhanceIcon = weapon.enhance ? '<img src="./res/img/icon/weaponenhance.png" alt="Enhancement" title="Enhancement" class="weapon-icon" />' : "";
         const partIcon = weapon.part ? '<img src="./res/img/icon/weaponpart.png" alt="Part" title="Part" class="weapon-icon" />' : "";
         const modificationIcon = weapon.modification ? '<img src="./res/img/icon/weaponmodification.png" alt="Weapon Modification" title="Weapon Modification" class="weapon-icon" />' : "";
-        const zb3classicTag = weapon.zb3classic ? "<strong>[ZHC] </strong>" : "";
 
         const row = document.createElement("tr");
 
@@ -186,6 +187,19 @@ async function loadAllweapons() {
 
         row.appendChild(previewCell);
         row.appendChild(descCell);
+
+        // === ADJUSTMENT CELL (only if any weapon has adjustment) ===
+        if (hasAnyAdjustment) {
+          const adjCell = document.createElement("td");
+          adjCell.className = "border-box-content";
+          adjCell.innerHTML = `
+            <p class="MsoNormal p-normal-tr-box">
+              <span class="weapon-adjustment text-box-content">${weapon.adjustment || "—"}</span>
+            </p>
+          `;
+          row.appendChild(adjCell);
+        }
+
         section.appendChild(row);
       });
     } catch (err) {

@@ -8237,6 +8237,12 @@ li[data-board-id][style*="display: none"] {
   color: grey;
 }
 
+@media (max-width: 900px) {
+  .sidebar-toggle {
+    display: flex !important;
+  }
+}
+
 @media (max-width: 375px) {
   .btn-darkmode {
     margin: 25px 30px 10px 10px;
