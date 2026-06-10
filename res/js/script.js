@@ -78,13 +78,13 @@ function setupCountdown(liId, endDateStr) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  setupCountdown(5601, "2026-01-31T00:00:00");
+  setupCountdown(5601, "2026-01-31T00:00:00"); // index_chn.html (unused)
 
   setupCountdown(6000, "2026-06-10T14:00:00"); // maintenance.htm
   setupCountdown(6001, "2026-05-13T15:30:00"); // temp-maintenance.htm
 
-  setupCountdown(6002, "2026-01-31T23:59:59");
-  setupCountdown(9999, "1980-01-01T00:00:00");
+  setupCountdown(6002, "2026-01-31T23:59:59"); // news.htm
+  setupCountdown(9999, "1980-01-01T00:00:00"); // clear cache
 
   if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.body.classList.add("dark-mode");
