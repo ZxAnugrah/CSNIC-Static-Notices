@@ -80,7 +80,7 @@ function setupCountdown(liId, endDateStr) {
 document.addEventListener("DOMContentLoaded", function () {
   setupCountdown(5601, "2026-01-31T00:00:00"); // index_chn.html (unused)
 
-  setupCountdown(6000, "2026-07-08T11:30:00"); // maintenance.htm
+  setupCountdown(6000, "2026-07-22T11:30:00"); // maintenance.htm
   setupCountdown(6001, "2026-05-13T15:30:00"); // temp-maintenance.htm
 
   setupCountdown(6002, "2026-01-31T23:59:59"); // news.htm
